@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 - Requêtes HTTP</title>
+</head>
+<body>
+    <h1>4 - Requêtes HTTP</h1>
+        <div>
+            <h3>Introduction</h3>
+
+            <p>
+                HTTP est un protocole de transmission au même titre que FTP.
+                <br>
+                Il permet à un client de récupérer auprès d’un serveur web des données. Si le client est un navigateur web, ce protocole permet
+                d’obtenir les données nécessaires à l’affichage d’une page internet.
+                <br>
+                Le protocole fonctionne par l’intermédiaire de requêtes émises par le client et de réponses fournies par le serveur
+            </p>
+
+            <h3>Étude détaillée d’un cas pratique</h3>
+
+            <p>
+                Examinons la demande d’une page web telle que eduscol.education.fr par un navigateur internet.
+                <br>
+                Le navigateur commence par demander, à un serveur de noms de domaines (DNS), l’adresse IP de eduscol.education.fr.
+                <br>
+                Celui-ci lui fournit 185.75.143.28.
+                <br>
+                La communication par IP n’est pas suffisante car sur un ordinateur peuvent fonctionner diverses applications utilisant internet
+                comme un navigateur ou un logiciel de messagerie. De plus, les paquets de données transitant par le protocole IP ont une taille
+                limite d’environ 1500 octets.
+                <br>
+                On utilise alors TCP, un protocole de connexion situé sur une couche supérieure à celle d’IP :
+            </p>
+
+            <ul>
+                <li>TCP initie et termine les connexions de manière courtoise.</li>
+                <li>TCP permet de communiquer au travers de ports réservés : 80 ou 8080 pour HTTP, 21 pour FTP.</li>
+                <li>TCP découpe les données en paquets compatibles avec la taille requise pour IP.</li>
+                <li>
+                    TCP numérote ces paquets et vérifie qu’ils sont bien arrivés à destination au moyen d’accusés de réception délivrés par le 
+                    destinataire.
+                </li>
+                <li>A l’arrivée, grâce aux numéros, TCP permet d’assembler les données.</li>
+            </ul>
+
+            <p>
+                Le navigateur contacte donc directement le serveur web à l’adresse 185.75.143.28 :80 en utilisant la couche TCP/IP.
+                <br>
+                La connexion s’établit grâce au
+                <a href="https://fr.linkedin.com/learning/les-fondements-des-reseaux-le-depannage/apprehender-le-mecanisme-three-way-handshake">
+                    three-way handshake
+                </a>.
+            </p>
+
+            <ul>
+                <li>Le client : ”Bonjour, je voudrais me connecter au port 80”.</li>
+                <li>Le serveur : ”Bonjour, vous pouvez vous connecter”.</li>
+                <li>Le client : ”Merci, je suis connecté”.</li>
+            </ul>
+
+            <p>Le client envoie alors la requête HTTP au serveur web.</p>
+
+            <textarea name="" id="http_1" cols="30" rows="10">
+                GET / HTTP/1.1
+                Host: eduscol.education.fr
+                User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:67.0) Gecko/20100101 Firefox/67.0
+                Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+                Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+                Accept-Encoding: gzip, deflate, br
+                Connection: keep-alive
+                Upgrade-Insecure-Requests: 1
+
+            </textarea>
+
+            <p>
+                La requête possède toujours la même forme:
+                <ul>
+                    <li>
+                        La ligne de requête découpée en méthode URL Version. Ici, on utilise la méthode <em>GET</em> pour obtenir une ressource. 
+                        Celle-ci est la racine (/) du site web. Et le protocole HTTP est la version 1.1.
+                    </li>
+                    <li>
+                        les champs de l’en-tête permettant de préciser la demande. L’hôte est eduscol.education.fr. Le navigateur web 
+                        (<em>User-Agent</em>) est Firefox. Le langage préféré est le français (<em>Accept-Language</em>). Les ressources 
+                        peuvent être compressées (gzip).
+                    </li>
+                    <li>une ligne vide.</li>
+                    <li> le corps de la requête (éventuellement).</li>
+                </ul>
+            </p>
+
+            <p>Le serveur web renvoie l’entête suivant:</p>
+
+            <textarea name="" id="http_2" cols="30" rows="10">
+                HTTP/2.0 200 OK
+                server: nginx
+                date: Tue, 16 Jul 2019 15:27:37 GMT
+                content-type: text/html; charset=UTF-8
+                content-length: 115892
+                set-cookie: PHPSESSID=s6v6hha07cp56gon9q8apjb494; path=/; HttpOnly
+                expires: Thu, 19 Nov 1981 08:52:00 GMT
+                pragma: no-cache
+                cache-control: max-age=3600
+                age: 2238
+                x-cache: HIT
+                x-cache-ttl-remaining: 1361.339
+                accept-ranges: bytes
+                x-content-type-options: nosniff
+                X-Firefox-Spdy: h2
+
+            </textarea>
+
+            <p>
+                suivi des données c’est-à-dire de la page web au format HTML.
+                <br>
+                La réponse possède, elle aussi, une réponse formatée:
+                <ul>
+                    <li>
+                        la ligne de statut découpée en Version Code Signification. Le serveur utilise une version supérieure de HTTP. 
+                        Le code renvoyé est 200 ce qui signifie que tout s’est bien passé et on a la traduction en OK ;
+                    </li>
+                    <li>les champs de l’en-tête où l’on apprend le type de serveur, la date, le type MIME de la réponse, sa longueur, etc. ;</li>
+                    <li>une ligne vide ;</li>
+                    <li>la réponse qui est une page HTML ici.</li>
+                </ul>
+                La connexion TCP/IP est alors fermée.
+                <br>
+                Le navigateur analyse la page et, pour chaque lien présent, réalise toutes les étapes précédentes avant d’afficher le résultat. 
+                Une page web moderne peut nécessiter près de 100 requêtes : la page eduscol.education.fr a nécessité par exemple 126 requêtes.
+            </p>
+
+            <h3>Approfondissement de HTTP</h3>
+
+            <p>
+                L’étude des requêtes et des réponses HTTP peut être réalisée dans Firefox grâce au menu Outils/Développement web/Réseau.
+                <br>
+                Les méthodes disponibles pour HTTP sont les suivantes : GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE, PATCH.
+                <br>
+                GET permet d’obtenir une ressource.
+                <br>
+                PUT, DELETE et PATCH permettent de modifier des données sur le serveur : il est évidemment nécessaire d’être authentifié pour
+                réaliser ces changements et le serveur doit être configuré pour autoriser ces changements.
+                <br>
+                HEAD permet d’obtenir seulement l’en-tête de la réponse.
+                <br>
+                POST permet d’envoyer une ressource au serveur : cette méthode est souvent utilisée lors du remplissage d’un formulaire.
+                <br>
+                Les codes de statuts commencent par 100, 200, 300, 400 ou 500.
+                <ul>
+                    <li>200 et suivants indiquent une réussite.</li>
+                    <li>300 et suivants indiquent un déplacement de la ressource demandée.</li>
+                    <li>400 et suivants indiquent une erreur du client : requête mal formulée ou ressource inexistante (la fameuse erreur 404)</li>
+                    <li>500 et suivants indiquent une erreur du serveur.</li>
+                </ul>
+                HTTP est sans état, c’est-à-dire qu’il n’y a pas de lien entre deux requêtes réalisées sur la même connexion. Cela pose problème en
+                particulier sur des sites de commerce en ligne avec un panier d’achat que l’on remplit au fur et à mesure. Mais HTTP n’est pas sans
+                session : on ajoute des cookies au flux HTTP, que l’on stocke sur le client, ce qui permet de maintenir une session pour l’utilisateur
+                et donc de remplir le panier d’achat!
+                <br>
+                HTTP a connu plusieurs révisions:
+                <ul>
+                    <li>Version 1.0 est ce que l’on vient de décrire.</li>
+                    <li>
+                        Version 1.1 : plusieurs requêtes peuvent se succéder au sein de la même connexion TCP/IP (keep-alive) mais si une
+                        requête n’aboutit pas, elle ralentit les suivantes. Une technique d’optimisation consiste à ouvrir plusieurs connexions TCP/IP
+                        en parallèle sur le même site mais les navigateurs modernes limitent le nombre de connexions parallèles à 6.
+                    </li>
+                    <li>
+                        Version 2.0 : plusieurs requêtes en parallèle gérées au sein de la même connexion TCP/IP. Possibilité de push (les données
+                        sont envoyées au client alors qu’il ne les a pas encore demandées). Compression des en-têtes.
+                    </li>
+                </ul>
+                Ces révisions permettent d’accélérer le chargement des pages web qui ont une certaine tendance à l’embonpoint! De plus, les
+                données sont mises en cache dans le navigateur. Cela permet de ne pas les recharger auprès du serveur lorsque l’on utilise les
+                boutons Précédent et Suivant du navigateur
+            </p>
+
+            <h3>Protocole SSL et sécurité</h3>
+
+            <p>
+                Le protocole SSL, ou plus récemment TLS, fonctionne également sur un modèle client-serveur.
+                Il assure:
+                <ul>
+                    <li>L'intégrité des données échangées entre le client et le serveur</li>
+                    <li>L'authentification du serveur</li>
+                    <li>
+                        La confidentialité des données échangées grâce à une transmission chiffrée (numéro de carte bancaire, 
+                        mot de passe, etc...
+                    </li>
+                </ul>
+                Une transmission chiffrée se reconnaît de la manière suivante:
+                <ul>
+                    <li>présence d'un cadenas dans la barre d'adresse du navigateur web</li>
+                    <li>mention HTTPS au lieu de HTTP au début de l'URL</li>
+                </ul>
+                Il faut noter que le côté sécurisé de la transmission ne doit pas dispenser l'utilisateur d'exercer son sens critique: 
+                des escrocs peuvent utiliser de faux sites bancaires ou de paiement de l'impôt sur le revenu.
+                <br><br>
+                Le site https://impots.gouv.app/portail/LoginAccess, un cadenas est la mention HTTPS sont bien présents. Pourtant, l'URL 
+                véritable du site est: https://impots.gouv.fr/portail/.
+                <br>
+                L'extension .app qui remplace le .fr indique que le site web consulté est un site pirate d'hameçonnage (phishing): s'y 
+                connecter avec ses vrais identifiants poserait un sérieux problème de sécurité !
+            </p>
+
+            <h3>Exercices:</h3>
+
+            <p>
+                Requête HTTP et code d'état
+                <br><br>
+                En informatique, le code HTTP (aussi appelé code d'état) est généré par le serveur et permet de déterminer le résultat d'une 
+                requête ou d'indiquer une erreur au client. Les codes les plus courants sont:
+                <ul>
+                    <li>200: succès de la requête</li>
+                    <li>301 et 302: redirections, respectivement permanente et temporaire</li>
+                    <li>401: utilisateur non authentifié</li>
+                    <li>403: accès refusé</li>
+                    <li>404: page non trouvée</li>
+                    <li>500 et 503: erreur serveur</li>
+                    <li>504: le serveur n'a pas répondu</li>
+                </ul>
+                <ol>
+                    <li>Afficher la page web https://www.lemonde.fr</li>
+                    <li>
+                        Ouvrir l'inspecteur de propriétés en appuyant sur la touche <b>f12</b>, appuyer sur l'onglet "réseau" puis, <b>f5</b>
+                    </li>
+                    <li>
+                        Modifier la requête HTTP envoyée au serveur web en cliquant sur "modifier et renvoyer", de manière à générer un des 
+                        codes HTTP les plus courants.
+                        <br>
+                        Par exemple, la requête: <em>GET https://www.lemonde.fr/nsi/</em> renvoie la réponse: <em>[HTTP/2 404 not found 88ms]</em>
+                    </li>
+                </ol>
+                <br>
+                Requête HTTP et code d'état 2
+                <br><br>
+                <ol>
+                    <li>Aller dans le dossier ressources de votre site de cours, installer le logiciel UwAmp et vcredist_x86</li>
+                    <li>Lancer UwAmp puis démarrer le serveur en cliquant sur le bouton "démarrer"</li>
+                    <li>
+                        Copier/coller dans le répertoire <em>www</em> du dossier UwAmp les 2 fichiers <em>formulaire_connexion.php</em> et 
+                        <em>cible.php</em> de votre dossier ressource
+                    </li>
+                    <li>Cliquer sur le bouton "navigateur www". Dans la barre d'adresse, saisir http://localhost/formulaire_connexion.php</li>
+                    <li>
+                        Ouvrir l'inspecteur de propriétés (f12) et selectionner l'onglet réseau.
+                        <br>
+                        Remplir les 2 champs "login" et "mot de passe" puis cliquer sur "se connecter"
+                    </li>
+                    <li>La requête envoyée est-elle de type GET ou POST ?</li>
+                    <li>
+                        Dans l'inspecteur de propriétés <em>f12</em> sélectionner la requête envoyée sur la première ligne.
+                        <br>
+                        Dans l'onglet requête, que voyez-vous apparaître ?
+                    </li>
+                    <li>Conclure sur la confidentialité des informations transmises par une requête POST.</li>
+                </ol>
+            </p>
+        </div>
+</body>
+</html>

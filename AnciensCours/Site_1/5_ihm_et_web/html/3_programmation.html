@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/funct.js"></script>
+    <title>3 - Programmation</title>
+</head>
+<body onload="affichDate()">
+    <h1>3 - Programmation</h1>
+        <div>
+            <h2>Quelques éléments du langage</h2>
+
+            <h3>Ecrire une fonction Javascript</h3>
+
+            <p>
+                Le langage JavaScript (JS) permet l'écriture de scripts côté client: il devient possible de calculer ou d'interagir avec 
+                tous les composants graphiques de la page web. Il est préférable d'enregistrer les scripts JavaScript dans un fichier .js
+                externe à la page web.
+
+                <h4>Exemple:</h4>
+
+                Voici comment insérer un lien vers le fichier <em>script.js</em> grâce à une instruction écrite dans l'en-tête de la page HTML:
+                <br>
+                <code>
+                    &lt;head>
+                        <br>
+                        &lt;script src="script.js">&lt;/script>
+                        <br>
+                    &lt;/head>
+                </code>
+                <br>
+                Attention, avec ce chemin en source, il faut que le fichier js soit au même endroit que la page web, car le chemin d'accés, ici 
+                est relatif.
+                <br><br>
+                Les scripts Javascript doivent être écrit avec précision, car ils sont sensibles à la casse (majuscules ou minuscules).
+                <h4>Exemple:</h4>
+                Voici la structure d'une fonction Javascript:
+                <br>
+                <textarea name="" id="js_0" cols="30" rows="10">
+                    function Calcul()
+                    {
+                        let a = document.getElementById("texte1").value;
+                        let b = a * a;
+                        document.getElementById("resultat").value = b;
+                    }
+                </textarea>
+                <br>
+                Cette fonction effectue le traitement suivant:
+                <ul>
+                    <li>Récupérer la valeur de la zone de texte ayant pour identifiant "texte1" et la stocker dans une variable local "a"</li>
+                    <li>Définir la variable "b" comme valant a² = a * a</li>
+                    <li>Affecter la valeur de "b" à la zone de texte ayant pour identifiant "resultat"</li>
+                </ul>
+                En JavaScript, il est indispensable de déclarer une variable avant son affectation. Plusieurs mots-clés sont possible, comme 
+                <em>var</em>, <em>let</em> et <em>const</em>. Le mot-clé <em>let</em> donne à la variable une portée locale, c'est-à-dire 
+                qu'elle ne sera accessible que dans le corps de la fonction Calcul().
+            </p>
+
+            <p>
+                Pour tester un code JavaScript en ligne, on peut utiliser le site 
+                <a href="https://jsfiddle.net">jsfiddle.net</a>.
+                <br>
+                Comme tout langage de script présent dans une page HTML, les instructions de JavaScript doivent se trouver entre balises.
+            </p>
+
+            <textarea name="" id="js_1" cols="30" rows="10">
+                <!DOCTYPE HTML>
+                <html>
+                    <body>
+                        <script>
+                            alert("Hello world!")
+                        </script>
+                    </body>
+                </html>
+            </textarea>
+
+            <p>
+                En cherchant des scripts JavaScript sur Internet, on pourra trouver le code suivant:
+            </p>
+
+            <textarea name="" id="js_2" cols="30" rows="10">
+                <script type="text/javascript">
+                    /* bloc d'instructions */
+                </script>
+            </textarea>
+
+            <p>
+                En HTML5, il n’est pas utile d’indiquer le type/MIME du script: c’est d’ailleurs considéré comme redondant.
+                <br>
+                Considérons l’exemple suivant, un peu plus riche.
+            </p>
+
+            <textarea name="" id="js_3" cols="30" rows="10">
+                <!DOCTYPE HTML>
+                <html>
+                    <body>
+                        <ol id="liste">
+                            <li id="item1" onclick="changetexte(this.id)">Un</li>
+                            <li id="item2" onclick="changetexte(this.id)">Deux</li>
+                        </ol>
+                        <script>
+                            function changetexte(ident)
+                            {
+                                var obj = document.getElementById(ident);
+                                alert(obj.firstChild.nodeValue)
+                            }
+                        </script>
+                    </body>
+                </html>
+            </textarea>
+
+            <p>
+                Dans un navigateur, cette page html a l’aspect suivant:
+                <br><br>
+                1. Un
+                <br>
+                2. Deux
+            </p>
+
+            <h3>Les gestionnaires d'événements</h3>
+
+            <p>
+                Il est possible d'associer des <b>évènements</b> aux composants graphiques.
+            </p>
+
+            <p>
+                En reprennant l'exemple précédant, un clic sur l’un des deux items provoque l’apparition d’une alerte avec le texte associé.
+                <br>
+                Deux éléments ont été mis en place pour obtenir ce comportement : une fonction définie dans le script et un appel à cette fonction
+                au niveau des éléments de la liste.
+                <br>
+                onclick est un gestionnaire d’événements : il permet de déclencher une action quand un événement, ici un clic gauche sur
+                l’élément, survient.
+                <br>
+                <em>onclick</em> est un gestionnaire d’événements : il permet de déclencher une action quand un événement, ici un clic gauche sur
+                l’élément, survient.
+                <br>
+                Dans la fonction <em>changetext</em> de paramètre <em>ident</em>, on commence par définir la variable <em>obj</em> et on lui 
+                affecte l’objet sur lequel on a cliqué. Le mot clé <em>document</em> fait référence à la page HTML.
+                <br>
+                Lors de la création du rendu de la page HTML, le DOM (ou Document Object Model) est créé. Il représente la structure de la page
+                HTML sous la forme d’un arbre ramifié. Chaque niveau est un noeud et le niveau hiérarchique le plus faible est le texte. 
+                Cela permet de comprendre la manière dont on accède, en JavaScript, au texte associé à chaque élément de la liste en utilisant 
+                la propriété en lecture seule firstChild qui renvoie le premier noeud de l’objet puis la propriété nodeValue qui permet de lire 
+                ou d’écrire la valeur de ce premier noeud.
+                <br>
+                Lors de l’appel de la fonction, le paramètre transmis utilise le mot clé <em>this</em> qui permet de faire référence à l’élément 
+                à partir duquel l’appel a été réalisé.
+                <br><br>
+                <h4>Exemple:</h4>
+
+                L'instruction suivante permet d'appeler la fonction JavaScript <em>Date()</em> à chaque chargement de la page web:
+                <br>
+                &lt;body onload="Date()">...
+                <br><br>
+                <p id="now"></p>
+                <br>
+                L'instruction suivante permet d'appeler la fonction <em>Calcul()</em> à chaque clic sur un bouton:
+                <br>
+                &lt;input type="button" onclick="Calcul()" value="Convertir">
+                <br><br>
+                La définition de la fonction permet d’observer deux éléments de la syntaxe de JavaScript:
+            </p>
+
+            <ul>
+                <li>Lors d’une succession d’instructions, celles-ci se terminent par un ;</li>
+                <li>Si celles-ci appartiennent au même bloc d’instructions, on les entoure d’accolades.</li>
+            </ul>
+
+            <p>
+                La partie de script peut être placée dans un fichier externe fonction.js et la page html modifiée de la manière suivante:
+            </p>
+
+            <textarea name="" id="js_4" cols="30" rows="10">
+                <!DOCTYPE HTML>
+                <html>
+                    <body>
+                        <ol id="liste">
+                            <li id="item1" onclick="changetexte(this.id)">Un</li>
+                            <li id="item2" onclick="changetexte(this.id)">Deux</li>
+                        </ol>
+                        <script src="fonction.js"></script>
+                    </body>
+                </html>
+            </textarea>
+
+            <h2>Gestion d’événements</h2>
+
+            <p>
+                La manière de programmer précédente, quoique fonctionnelle, n’est pas préconisée. Il est préférable de séparer HTML de 
+                JavaScript.
+                <br>
+                Les nouveaux codes sont alors:
+            </p>
+
+            <h4>Code 1</h4>
+            <textarea name="" id="js_5" cols="30" rows="10">
+                <!DOCTYPE HTML>
+                <html>
+                    <body>
+                        <ol id="liste">
+                            <li id="item1">Un</li>
+                            <li id="item2">Deux</li>
+                        </ol>
+                        <script src="fonction2.js"></script>
+                    </body>
+                </html>
+            </textarea>
+
+            <h4>Code 2 - fonction2.js</h4>
+
+            <textarea name="" id="js_6" cols="30" rows="10">
+                var objets = document.querySelectorAll('li');
+                function change_texte(e) {
+                    alert(e.target.firstChild.nodeValue)
+                }
+                for (var i = 0; i < objets.length; i++) {
+                    objets[i].onclick = change_texte
+                }
+            </textarea>
+
+            <p>
+                Le code JavaScript commence par récupérer la liste de tous les items de type &lt;li>. A chacun de ces objets, on associe le 
+                gestionnaire d’événement <em>onclick</em> qui réalisera l’appel à la fonction <em>change_texte</em>. Une nouveauté dans la 
+                définition de la fonction est le paramètre <em>e</em> qui représente l’événement lors de l’appel de la fonction. <em>e.target</em> 
+                permet de récupérer l’objet sur lequel le clic a été effectué.
+                <br>
+                Une troisième manière d’associer un gestionnaire d’événement à un élément est:
+            </p>
+
+            <h4>Code 3 - fonction2.js</h4>
+
+            <textarea name="" id="js_7" cols="30" rows="10">
+                objets[i].addEventListener('click', change_texte)
+            </textarea>
+
+            <p>
+                <em>myElement.addEventListener</em> permet d’associer plusieurs fonctions à l’événement <em>'click'</em> alors que la propriété
+                <em>myElement.onclick</em> ne retient que la dernière fonction affectée.
+                <br>
+                De plus, on peut utiliser <em>myElement.removeEventListener</em> pour retirer un objet de l’écouteur d’événements.
+                <br>
+                On peut citer quelques gestionnaires d’événements:
+                <ul>
+                    <li>
+                        <em>myElement.onfocus</em> et <em>myElement.onblur</em> qui déclenchent un événement lorsque l’objet est activé ou non 
+                        grâce à l’utilisation de la touche de tabulation.
+                    </li>
+                    <li>
+                        <em>window.onkeypress</em>, <em>window.onkeydown</em> et <em>window.onkeyup</em> qui réagissent si on appuie et relâche 
+                        une touche, si l’appui est maintenu et si la touche est relâché respectivement. Ces événements sont obligatoirement liés 
+                        à la fenêtre du navigateur.
+                    </li>
+                    <li>
+                        <em>myElement.onmouseover</em> et <em>myElement.onmouseout</em> qui réagissent lors du survol de l’élément et de l’arrêt 
+                        de celui-ci
+                    </li>
+                </ul>
+                Les événements sont munis de propriétés : un événement <em>MouseEvent</em> possède des propriétés de position 
+                <em>MouseEvent.screenX</em>, <em>MouseEvent.screenY</em>, de bouton cliqué <em>MouseEvent.button</em>, etc.
+            </p>
+
+            <h2>Références</h2>
+
+            <p>
+                Le programme indique qu’il ne saurait être question de développer une expertise dans le langage JavaScript. Les sites suivants
+                seront utiles pour la mise en œuvre de projets:
+                <ul>
+                    <li>
+                        La syntaxe de JavaScript: 
+                        <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript">
+                            https://developer.mozilla.org/fr/docs/Web/JavaScript
+                        </a>
+                    </li>
+                    <li>
+                        Les préconisations du W3C concernant les événements: 
+                        <a href="https://www.w3.org/TR/DOM-Level-3-Events/">
+                            https://www.w3.org/TR/DOM-Level-3-Events/
+                        </a>
+                    </li>
+                    <li>
+                        Un tutoriel pour programmer en JavaScript: 
+                        <a href="https://openclassrooms.com/fr/courses/1916641-dynamisez-vos-sites-web-avec javascript/">
+                            https://openclassrooms.com/fr/courses/1916641-dynamisez-vos-sites-web-avec javascript/
+                        </a>
+                    </li>
+                </ul>
+            </p>
+
+            <h2>Exercices:</h2>
+
+            <p>
+                <h3>Uniquement du HTML</h3>
+                <ol>
+                    <li>
+                        Créer 2 pages web nommées <em>accueil.html</em> et <em>photos.html</em>
+                    </li>
+                    <li>
+                        Insérer dans chaque page web les éléments suivants:
+                        <ul>
+                            <li>Un titre, du texte et un tableau décrit en HTML</li>
+                            <li>Une hiérarchie dans les titres avec les balises <code>&lt;h1></code>, <code>&lt;h></code>, ...</li>
+                            <li>Quelques images insérées avec la balise auto-fermante <code>&lt;img ... /></code></li>
+                            <li>Deux liens hypertexte d'une page vers l'autre</li>
+                            <li>Un lien hypertexte vers un autre site web avec la balise <code>&lt;a href=...></code></li>
+                            <li>Une vidéo embarquée Youtube pour illustrer l'activité*</li>
+                                * pour insérer une vidéo Youtube dans la page web:
+                                <ul>
+                                    <li>aller visionner la vidéo de votre choix</li>
+                                    <li>cliquer sur "partager", puis "intégrer"</li>
+                                    <li>
+                                        copier/coller le code HTML débutant par <code>&lt;iframe> entre les balises </code> entre les balises 
+                                        <code>&lt;body></code> et <code>&lt;/body></code> de votre page
+                                    </li>
+                                </ul>
+                            <li>
+                                Les mots-clés du texte repérés avec les balises <code>&lt;strong></code> et <code>&lt;/strong></code>, 
+                                afin d'optimiser leur visibilité pour les moteurs de recherche.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Expliquer pourquoi ces 2 pages web n'ont aucun style et proposer un moyen de donner du style</li>
+                </ol>
+            </p>
+
+            <p>
+                <h3>HTML et CSS</h3>
+                <ol>
+                    <li>Rappeler le nom du langage utilisé sur le web pour donner du style à une page web</li>
+                    <li>
+                        Insérer un lien vers une feuille de style aux pages web de l'exercice précédent, grâce à la balise:
+                        <br>
+                        <code>&lt;link href="style.css" type="text/css" rel="stylesheet"></code>
+                    </li>
+                    <li>Définir le style de votre choix pour les 2 pages web</li>
+                </ol>
+            </p>
+
+            <p>
+                <h3>JavaScript</h3>
+                <h4>Trouvez les 4 erreurs qui se sont introduites dans le code suivant:</h4>
+                <textarea name="" id="js_8" cols="30" rows="10">
+                    function affiche() }
+                        document.GetElementByid("texte).innerHTML = "Hello !";
+                </textarea>
+
+                <h4>Programmer un convertisseur de devises:</h4>
+                <ul>
+                    <li>Programmer un convertisseur qui fasse la conversion du dollar américain en euro.</li>
+                    <li>Proposer une autre version plus élaboré du convertisseur qui puisse convertir dollar, euro, livre sterling et yen.</li>
+                </ul>
+
+                <h4>Convertisseur numérique vers hexadécimal:</h4>
+                Programmer un convertisseur de valeur numérique vers hexadécimal.
+                
+                <h4>Afficher une couleur:</h4>
+                <ul>
+                    <li>
+                        Préparer la page web en y insérant les composants graphiques suivant:
+                        <br>
+                        3 zones de textes
+                        <br>
+                        un bouton poussoir
+                    </li>
+                    <li>
+                        Programmer une fonction <em>Couleur()</em> qui modifie dynamiquement la couleur de fond de la page et qui sera 
+                        appelée lors d'un clic sur le bouton.
+                    </li>
+                </ul>
+            </p>
+        </div>
+</body>
+</html>

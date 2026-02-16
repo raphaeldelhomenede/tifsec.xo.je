@@ -1,1 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 - Introduction</title>
+</head>
+<body>
+    <h1>1 - Introduction</h1>
+        <div>
+            <h2>Le savais-tu ?</h2>
 
+            <h4>Anecdote 1</h4>
+
+            <p>
+                En 2019, 61% des internautes ont abandonné l'achat d'un produit en ligne, car il manquait une preuve de la fiabilité du site Web.
+            </p>
+
+            <h4>Anecdote 2</h4>
+
+            <p>
+                80% des sites web intègrent des scripts écrits en PHP, qui est un langage de programmation côté serveur.
+                <br>
+                C'est le cas de Facebook, Wikipédia ou encore Yahoo !
+            </p>
+
+            <h2>Repères historiques</h2>
+
+            <ul>
+                <li>
+                    <b>1989</b>: Tim Berners-Lee et Robert Cailliau inventent le Web.
+                    <br>
+                    Internet est une infrastructure de réseaux munie de moyens de transmission (les routeurs) et de moyens logiciels permettant 
+                    à des machines de communiquer entre elles.
+                    <br>
+                    Au début d'Internet, il était difficile de trouver une information donnée sur les réseaux. Aussi, deux chercheurs du CERN 
+                    de Genève, Tim Berners-Lee et Robert Cailliau ont-ils imaginé un ensemble de protocoles et de logiciels que Robert Cailliau 
+                    aurait voulu appeler Loki, du nom d'un dieu nordique, fourbe, immoral et manipulateur. C'est la naissance du Web qui 
+                    s'appellera finalement <em>World Wide Web</em>, ils élaborent les trois caractéristiques essentielles du Web:
+                    <ul>
+                        <li>Le protocole HTTP</li>
+                        <li>Le langage HTML</li>
+                        <li>Le système URL</li>
+                    </ul>
+                </li>
+                <li>
+                    <b>1993</b>: Il existe seulement 623 sites web. Aujourd'hui, il y a plus de 200 000 000 sites web actifs.
+                    <br>
+                    La diffusion gratuite de ces nouveaux outils propulse le Web sur les réseaux Internet. Le logiciel Mosaïc, développé sous 
+                    UNIX, est le premier navigateur web doté d'une interface graphique. De l'interactivité avec l'utilisateur est ajoutée 
+                    grâce aux formulaires qui préfigurent l'essor du commerce en ligne.
+                    <br>
+                    Une architecture mondiale s'impose alors rapidement selon le <b>modèle client-serveur</b>, en particulier grâce à 
+                    l'entreprise américaine CISCO, qui fiabilise les échanges sur le réseau Internet par la fabrication de routeurs plus 
+                    fiables et plus rapides, et l'amélioration du protocole de communication TCP/IP. La démocratisation des ordinateurs 
+                    personnels contribue également à un développement rapide.
+                </li>
+                <li>
+                    <b>1994</b>: Cookies, chiffrement SSL et JavaScript
+                    <br>
+                    Le navigateur web Netscape, dont Mozilla Firefox est l'héritier, apporte une avancée déterminante au Web: la gestion des 
+                    cookies, la sécurisation des transmissions grâce au protocole SSL et le langage Javascript qui apporte de 
+                    l'interactivité aux pages grâce à l'écriture de scripts côté client.
+                </li>
+                <li><b>1995</b>: Le langage de description PHP (côté serveur) est popularisé par l'écriture de pages web interactives.</li>
+                <li><b>1196</b>: La société Netscape introduit JavaScript dans son navigateur web, les pages deviennent dynamiques.</li>
+                <li>
+                    <b>1997</b>: Wi-Fi, haut débit et commerce en ligne se développent
+                    <br>
+                    La norme Wi-Fi 802.11 rend possible la création de réseaux locaux sans fil à haut débit. La consultation des pages web 
+                    est encore facilité par la suite par l'utilisation croissante des smartphones et des tablettes sans fil.
+                    <br>
+                    Le commerce en ligne se développe avec un chiffre d'affaires d'envrions 100 milliards d'euros en 2019 en France.
+                    80% des internautes ont fait un achat sur le Web en 2019, dont près de la moitié sur leur smartphone, pour un taux de 
+                    satisfaction de 90%.
+                </li>
+            </ul>
+
+            <h2>Le modèle client-serveur</h2>
+
+            <p>
+                Le <b>modèle client-serveur</b> est une architecture de communication entre deux machines le plus souvent distinctes: le client 
+                et le serveur.
+
+                <ul>
+                    <li>
+                        <b>Client </b>:
+                        <br>
+                        Le client est la machine (ordinateur, smartphone, etc...) qui demande l'exécution d'un service (comme par exemple, 
+                        l'affichage d'une page web). Le client envoie des requêtes au serveur. Les clients web sont souvent des navigateurs 
+                        web.
+                    </li>
+                    <li>
+                        <b>Serveur </b>:
+                        <br>
+                        Un serveur est une machine robuste et rapide chargée de répondre à la demande (requête) du client en lui fournissant 
+                        le service demandé.
+                    </li>
+                    <li>
+                        <b>Requête </b>:
+                        La requête est le message transmis par le client au serveur, décrivant le service à rendre.
+                    </li>
+                    <li>
+                        <b>Réponse </b>:
+                        La réponse est le message transmis par le serveur au client suita à l'exécution d'un service.
+                    </li>
+                </ul>
+                Dans le modèle client-serveur, cleint et serveur ont des rôles bien distincts:
+                <ul>
+                    <li>
+                        Après l'envoie d'une requête HTTP, le client se met en pause, en attendant la réponse du serveur.
+                    </li>
+                    <li>
+                        Le serveur renvoie une réponse au client, composées d'un code d'état (1xx, 2xx, 3xx, 4xx ou 5xx) et du contenu demandé 
+                        si la requête est un succès.
+                    </li>
+                    <em><b>Attention</b></em>, ne pas confondre le modèle client-serveur avec le réseaux pair-à-pair dans lequel client et 
+                    serveur jouent le même rôle.
+                </ul>
+            </p>
+
+            <h2>Description d'une page web</h2>
+
+            <p>
+                Le Web est un ensemble de pages reliées par des liens hypertexte.
+                <br>
+                L'affichage d'une page web peut être optimisé (rapidité et présentation) selon les particularités du client (ordinateur, 
+                smartphone).
+                <br><br>
+                Le langage HTML permet de structurer le contenu de la page web. Il autorise une certaine souplesse de syntaxe: il est alors 
+                parfois possible d'ouvrir une balise HTML sans la fermer ou de donner la valeur d'un attribut entre guillemets ou 
+                apostrophes. Il est donc possible que la page web n'ait pas toujours le même aspect visuel, selon le navigateur web utilisé.
+                <br><br>
+                Le langage CSS est utilisé pour donner du style à la page, pour mettre en forme le texte: centrer un texte ou une image, 
+                mettre en gras, changer la police de caractère...
+                <br>
+                Une feuille de style externe, nommée par exemple <em>style.css</em>, est souvent insérée dans l'en-tête de la page web, 
+                avec la syntaxe suivante:
+                <br><br>
+                <textarea name="" id="html_1" cols="30" rows="10">
+                    <head>
+                        <link href="style.css" rel="stylesheet">
+                    </head>
+                </textarea>
+                <br><br>
+                Cette feuille de style définit les choix graphiques effectués par l'auteur de la page. Ainsi, en modifiant l'unique feuille 
+                de style externe d'un site web, stockée côté serveur, l'ensemble des pages web se trouve instantanément modifié.
+                <br><br>
+                Il est possible de rendre une page web interactive, de telle sorte qu'il y ait de l'interactivité entre l'utilisateur et 
+                la page web.
+                <br>
+                Son contenu pourra alors varier selon l'heure de la requête, le nom de l'utilisateur ou encore le remplissage d'un 
+                formulaire par l'utilisateur, etc.
+                <br>
+                <em>Remarque</em>: La technologie AJAX permet le transfert de données en arrière-plan entre le client et le serveur, 
+                sans avoir à recharger la page web. Les suggestions de recherche sur Google utilisent cette technologie.
+            </p>
+
+            <h2>Scripts côté serveur et côté client</h2>
+
+            <p>
+                Le Web est basé sur un principe simple: tous les contenus sont fournis par les serveurs web et peuvent être récupérés 
+                à distance par les clients.
+                <br>
+                Ainsi un contenu <b>statique</b> sera-t-il simplement téléchargé par le client, tandis qu'un contenu <b>dynamique</b> 
+                ne pourra fonctionner que grâce à l'existence de scripts, des petits bouts de code chargés d'exécuter une action 
+                prédéfinie programmée à l'avance. Ces scripts peuvent ainsi être exécutés soit du côté serveur soit du côté client.
+                <br><br>
+                <b>Les scripts côté serveur</b> nécessitent une communication avec le serveur et ne permettent pas une interactivité 
+                immédiate. L'exécution côté serveur est souvent nécessaire, pour gérer les droits des utilisateurs par exemple.
+                <br>
+                Un script côté serveur sera par exemple utilisé pour collecter des données via un formulaire ou mettre à jour une base 
+                de données.
+                <br>
+                Le serveur sera donc fortement sollicité.*
+                <br>
+                Le langage de script côté serveur le plus couramment utilisé de nos jours est le langage de programmation <b>PHP</b>.
+                <br>
+                Le script sera alors directement intégré en langage PHP, et le code source sera entièrement masqué au client. Lors de 
+                la génération de la page web dynamique, c'est une page HTML qui sera transmise au client.
+                <br><br>
+                <b>Les scripts côté navigateur</b> s'exécutent directement sur la machine. Il est donc possible d'avoir une intéractivité 
+                immédiate, pour des jeux par exemple.
+                <br>
+                Un script côté client sera exécuté par le client, dans le navigateur web, pour apporter un côté dynamique au site web.
+                <br>
+                Le script sera donc directement intégré dans le code HTML de la page web ou alors inséré dans un fichier externe. Les 
+                machines clientes étant généralement relativement puissantes, cette exécution de scripts côté client permet de soulager 
+                les serveurs sans ralentir le processus global.
+                <br>
+                Bloquer l'exécution d'un script sera cependant toujours possible via une extension installée dans le navigateur web, 
+                comme NoScript de Firefox.
+                <br><br>
+                JavaScript est un langage utilisé pour les scripts côté client. Il est interprété côté client par le navigateur.
+            </p>
+
+            <h2>Composants graphiques d'une page web</h2>
+
+            <p>
+                <h3>Les composants usuels</h3>
+                Pour rendre une page web interactive, il faut y insérer des composants d'<b>interface graphique</b> avec lesquels 
+                l'utilisateur peut interagir, en agissant dessus avec le doigt (écran tactile) ou la souris (ordinateur).
+                <br>
+                Ces composants sont compatibles avec les navigateurs les plus utilisés.
+                <br><br>
+                Il existe un grand nombre de composants graphiques, dont voici les plus courants:
+                <ul>
+                    <li>Zone de texte</li>
+                    <li>Bouton poussoir</li>
+                    <li>Bouton radio</li>
+                    <li>Zone de mot de passe</li>
+                    <li>Case à cocher</li>
+                </ul>
+                En HTML, chaque composant graphique peut être inséré avec la balise suivante:
+                <br><br>
+                <code>&lt;input type="text" value="Hello world !"></code>
+                <br><br>
+                <em>type</em> et <em>value</em> étant les attributs de la balise
+                <br>
+                <em>"text"</em> et <em>"Hello world !"</em> étant les valeurs de ces attributs
+                
+                <h3>L'attribut type</h3>
+                L'attibut <em>type</em> indique le type de composant graphique.
+                <br>
+                <h4>Exemple:</h4>
+                Si on insère les quatres balises <em>&lt;input></em> suivantes dans une page web, entre &lt;body> et &lt;/body>, on 
+                obtiendra alors les composants graphiques ci-dessous:
+                <br>
+                <textarea name="" id="html_2" cols="30" rows="10">
+                    <input type="text" value="Hello world !">
+                    <br><br>
+                    <input type="radio" value="choix">Choix 1
+                    <br><br>
+                    <input type="button" value="Cliquer ici !">
+                    <br><br>
+                    <input type="password" value="1234">
+                </textarea>
+                <br>
+                <h3>L'attribut value</h3>
+                L'attribut <em>value</em> définit la valeur par défaut qui sera affichée dans l'élément au chargement de la page web.
+                Cette valeur est accessible et modifiable, notamment grâce à la méthode <em>getElementById()</em> (JavaScript).
+                
+                <h3>L'attribut id (identifiant unique)</h3>
+                Le côté dynamique de la page web est assuré par la possible modification des valeurs des attributs des composants 
+                graphiques.
+                <br>
+                Pour pouvoir accéder indépendamment à chacun des composants, il faut pouvoir les identifier de manière unique: c'est 
+                le rôle de l'attribut <em>id</em>. Chaque composant peut posséder un identifiant unique, noté <em>id</em>, composé d'une 
+                chaîne de caractères.
+                <h4>Exemple:</h4>
+                <code>&lt;input type="text" value="Hello !" id="texte1"></code>
+                <br><br>
+                Chaque composant devient alors manipulable avec un script. On peut aussi modifier l'aspect d'un composant avec du code CSS.
+                
+                <h3>Le Document Object Model (DOM)</h3>
+                Le <b>DOM</b> (Document Object Model) d'une page HTML est la présentation de la page sous forme d'objets qu'il est possible 
+                de manipuler. On peut le modéliser avec la structure d'un arbre, composé de branches et de feuilles, qui représentent les 
+                "parents" et les "enfants".
+                <ul>
+                    <li>Les objets du DOM peuvent représenter une fenêtre, un document, une phrase, un style, etc...</li>
+                    <li>Le DOM représente le document affiché par une structure en arbre, comportant des noeuds (branches et feuilles)</li>
+                    <li>
+                        Le DOM est présent dans le navigateur. Sa manipulation peut être facilitée par des bibliothèques JavaScript, 
+                        comme par exemple, jQuerry.
+                    </li>
+                </ul>
+                
+                <h3>La méthode getElementById(id)</h3>
+                La méthode <em>getElementById(id)</em> est l'une des fonctions les plus utiles du DOM HTML, car elle permet de renvoyer 
+                l'objet dont l'identifiant <em>id</em> est donné en paramètre de la fonction.
+                <br>
+                Il est alors possible de modifier par un script les attributs de l'objet: la page devient dynamique.
+                <h4>Exemple:</h4>
+                <code>document.getElementById("texte1").value;</code>
+                <br>
+                renvoie "Hello !": c'est la valeur de l'attribut <em>value</em> du 
+                composant ayant pour identifiant <em>"texte1"</em>.
+                <br><br>
+                <code>document.getElementById("texte1").value = "Bonjour";</code>
+                <br>
+                change le contenu du composant ayant pour identifiant 
+                <em>"texte1"</em> et le remplace par "Bonjour".
+            </p>
+        </div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 - Les formulaires</title>
+</head>
+<body>
+    <h1>5 - Les formulaires</h1>
+        <div>
+            <h3>Construction</h3>
+
+            <p>
+                Sur de nombreuses pages web, des formulaires sont utilisés que ce soit pour une authentification par identifiant et mot de passe
+                ou pour une recherche d’informations.
+                <br>
+                Le formulaire est un élément codé en HTML:
+            </p>
+
+            <textarea name="" id="form_1" cols="30" rows="10">
+                <form method="get" action="action.php">
+                    <label for="ident">Votre identifiant</label> :
+                    <input type="text" name="identifiant" id="ident"/>
+                    <input type="submit" value="Envoyer" />
+                </form>
+            </textarea>
+
+            <p>
+                Un formulaire se trouve contenu dans &lt;form [...] /form>.
+                <br>
+                Dans la balise &lt;form>, on ajoute la méthode HTTP utilisée (ici GET) et le lien qui sera activé lors de l’envoi du 
+                formulaire (action.php).
+                <br>
+                Ensuite, grâce à &lt;input[...] />, on crée deux objets:
+                <ul>
+                    <li>un champ de texte (ligne 3)</li>
+                    <li>et un bouton pour valider le formulaire (ligne 4).</li>
+                </ul>
+                Le champ de texte est précédé d’un label référencé par ident. Cette référence est utilisée dans input avec id afin qu’un 
+                clic sur ”Votre identifiant” place le curseur dans le champ de texte correspondant. identifiant est une ”variable” qui recevra 
+                le texte entré dans le champ et qui sera transmise à <em>action.php</em>.
+            </p>
+
+            <h3>GET ou POST</h3>
+
+            <p>
+                Lors de l’utilisation de la méthode GET dans un formulaire, les données sont transmises en clair dans la barre d’adresse du 
+                navigateur. Dans les faits, on obtient action.php?identifiant=&lt;texte entré>.
+                <br>
+                Cela pose des problèmes de sécurité. En effet, au lieu du type "text", on peut utiliser le type "password". Lors de l’entrée du
+                mot de passe, les lettres sont remplacées par des points. Mais lors de l’envoi des données, le mot de passe apparaît en toutes
+                lettres dans la barre d’adresse!
+                <br>
+                La méthode POST transmet les données dans le corps de la requête : les données sont donc moins visibles.    
+            </p>
+
+            <h4>Gestion des données</h4>
+
+            <p>
+                Pour gérer les données provenant du formulaire, on utilise un script php action.php. Le code le plus simple possible 
+                est le suivant:
+            </p>
+
+            <h5>Code 1 - action.php</h5>
+
+            <textarea name="" id="form_2" cols="30" rows="10">
+                <html>
+                    <body>
+                        <?php
+                            echo $_POST['identifiant'];
+                        ?>
+                    </body>
+                </html>
+            </textarea>
+
+            <p>
+                On suppose que la méthode utilisée dans l’envoi du formulaire est POST. Grâce à PHP, on peut alors récupérer le texte et 
+                l’afficher.
+                <br>
+                PHP est un langage de script executé au niveau du serveur. Celui-ci doit évidemment accepter de gérer le PHP. Pour tester le
+                formulaire et le script en local, on peut installer WAMP sous Windows, MAMP sous Mac OS X ou LAMP sous Linux. AMP est
+                l’acronyme de Apache (serveur web), MySQL (gestionnaire de base de données), PHP.
+            </p>
+
+            <h3>Sécurité</h3>
+
+            <p>
+                HTTP transmet le texte brut. Pour que les données soient transmises de manière sécurisée, on utilise HTTPS. Lorsque la 
+                communication avec un site WEB est sécurisée, la barre d’adresse commence par un cadenas.
+                <br>
+                HTTPS est une association de HTTP et de SSL.
+                <br>
+                SSL (Secure Socket Layer) vient en complément de TCP/IP. Ses avantages sont:
+                <ul>
+                    <li>la confidentialité : on ne peut espionner les données. La connexion est chiffrée.</li>
+                    <li>l’intégrité des données : on ne peut les modifier.</li>
+                    <li>
+                        l’authentification : on est sûr de l’identité du client et du serveur grâce à des certificats présents dans le 
+                        navigateur, fournis par des sociétés tierces à qui on fait implicitement confiance.
+                    </li>
+                </ul>
+                L’évolution récente de SSL est TLS (Transport Layer Security) qui accompagne la version 2 de HTTP.
+                <br>
+                De plus en plus de sites WEB basculent en HTTPS sous la pression des navigateurs internet. En effet, au lieu d’indiquer simplement
+                qu’un site en HTTPS est sécurisé avec le fameux cadenas, les navigateurs indiquent que les sites HTTP ne sont pas sécurisés.
+                <br>
+                Il faut bien se rappeler que seule la communication est sécurisée : rien ne nous assure que les données confidentielles fournies au
+                site sont elles-mêmes protégées sur le serveur.
+            </p>
+
+            <h3>Références</h3>
+
+            <ul>
+                <li>
+                    Le descriptif de HTTP fourni par Mozilla:
+                    <a href="https://developer.mozilla.org/fr/docs/Web/HTTP">
+                        https://developer.mozilla.org/fr/docs/Web/HTTP
+                    </a>.
+                </li>
+                <li>
+                    Les formulaires en HTML:
+                    <a href="https://developer.mozilla.org/fr/docs/Web/Guide/HTML/Formulaires">
+                        https://developer.mozilla.org/fr/docs/Web/Guide/HTML/Formulaires
+                    </a>.
+                </li>
+                <li>
+                    Les scripts PHP:
+                    <a href="https://www.w3schools.com/php7/default.aspou https://openclassrooms.com/fr/courses/918836-concevez-votre-site-web-avec-php-et-mysql">
+                        https://www.w3schools.com/php7/default.aspou https://openclassrooms.com/fr/courses/918836-concevez-votre-site-web-avec-php-et-mysql
+                    </a>.
+                </li>
+            </ul>
+        </div>
+</body>
+</html>
