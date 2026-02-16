@@ -42,18 +42,18 @@ if (isset($_GET['favicon_ico'])) {
     <p>Voici les cours de NSI</p>
     <div class="display-flex">
         <div class="element">
-            <a href="https://tifsec-nsi.xo.je/SNT"><h2 style="margin-top: 0px;">SNT</h2></a>
+            <a href="https://tifsec-nsi.up.railway.app/SNT"><h2 style="margin-top: 0px;">SNT</h2></a>
         </div>
         <div class="element">
-            <a href="https://tifsec-nsi.xo.je/1NSI"><h2 style="margin-top: 0px;">Première NSI</h2></a>
+            <a href="https://tifsec-nsi.up.railway.app/1NSI"><h2 style="margin-top: 0px;">Première NSI</h2></a>
         </div>
         <div class="element">
-            <a href="https://tifsec-nsi.xo.je/TNSI"><h2 style="margin-top: 0px;">Terminale NSI</h2></a>
+            <a href="https://tifsec-nsi.up.railway.app/TNSI"><h2 style="margin-top: 0px;">Terminale NSI</h2></a>
         </div>
     </div>
     <br><br>
     <a href="https://raphaeldelhomenede.github.io/tifsec/AnciensCours/"><p>Voici les anciens cours de NSI</p></a>
-    <a href="https://tifsec-nsi.rf.gd/TNSI/nouvelles-versions/"  style="margin-top: -5px;"><p>Voici les nouveaux cours de NSI</p></a>
+    <a href="https://tifsec-nsi.up.railway.app/TNSI/ancienne-version/nouvelles-versions/"  style="margin-top: -5px;"><p>Voici les nouveaux cours de NSI</p></a>
 </body>
 </html>
 <script>
