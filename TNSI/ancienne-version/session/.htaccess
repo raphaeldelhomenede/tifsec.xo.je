@@ -1,1 +1,11 @@
+RewriteEngine On
 
+RewriteCond %{REQUEST_URI} !^/tifsec.github.io
+RewriteCond %{DOCUMENT_ROOT}/%{REQUEST_URI} !-f
+RewriteCond %{DOCUMENT_ROOT}/%{REQUEST_URI} !-d
+
+# Si l'URL est vide, rediriger vers TNSI/ sans paramètre
+RewriteRule ^$ https://tifsec-nsi.rf.gd/TNSI/ [R=301,L]
+
+# Sinon, rediriger avec le paramètre session
+RewriteRule ^(.*)$ https://tifsec-nsi.rf.gd/TNSI/?session=$1 [R=301,L]
