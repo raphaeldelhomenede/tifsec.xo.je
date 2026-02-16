@@ -401,7 +401,7 @@ if (isset($_GET["logo_qui_fait_fuir_toutes_les_jolies_filles"])) {
     <!-- <footer>
         <p>&copy; <?php date_default_timezone_set('Europe/Paris'); echo date("Y"); ?> Programme NSI</p>
     </footer> -->
-    <!--<?php
+    <!--<?php /*
     function lien2partage1($param1) {
         $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
         $host = $_SERVER['HTTP_HOST'];
@@ -426,7 +426,7 @@ if (isset($_GET["logo_qui_fait_fuir_toutes_les_jolies_filles"])) {
         $pos = strpos($queryString, 'session=');
         if ($pos !== false) {$sessionValue = substr($queryString, $pos + strlen('session='));echo lien2partage1($sessionValue);
         } else {echo "Paramètre session non trouvé.";}
-    }
+    } */
     ?> -->
 </body>
 </html>
