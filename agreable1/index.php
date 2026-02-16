@@ -2,11 +2,11 @@
 // On détecte le protocole du site
 $siteprotoole = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
 
-if ($siteprotoole == "http") { ?>
+/*if ($siteprotoole == "http") { ?>
     <head>
       <meta http-equiv="refresh" content="0; URL=https://<?php echo $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>" />
     </head>
-<?php }
+<?php }*/
 
 if (isset($_GET["Cest_interressant_pour_lui_ca"])) {
     $url = "https://audio.com/xiaomi-7/audio/agreable1";
