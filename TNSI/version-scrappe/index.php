@@ -52,7 +52,7 @@ if (isset($_GET['favicon_ico'])) {
         </div>
     </div>
     <br><br>
-    <a href="https://raphaeldelhomenede.github.io/tifsec/AnciensCours/"><p>Voici les anciens cours de NSI</p></a>
+    <a href="https://tifsec-nsi.up.railway.app/AnciensCours/"><p>Voici les anciens cours de NSI</p></a>
     <a href="https://tifsec-nsi.up.railway.app/TNSI/ancienne-version/nouvelles-versions/"  style="margin-top: -5px;"><p>Voici les nouveaux cours de NSI</p></a>
 </body>
 </html>
