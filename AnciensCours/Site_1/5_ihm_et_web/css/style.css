@@ -1,0 +1,292 @@
+body
+{
+    font-family: calibri;
+}
+
+.chapitres
+{
+    display: grid;
+}
+
+.chapitres a
+{
+    margin-bottom: 10px;
+}
+
+.container
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+section
+{
+    display: inline-flex;
+    grid-template-columns: 10% 50%;
+    height: 100%;
+}
+
+article
+{
+    margin-top: -20px;
+    margin-left: 10px;
+    width: 140%;
+}
+
+aside img
+{
+    width: 250px;
+    height: 250px;
+}
+
+table
+{
+    border: 1px solid black;
+}
+
+table th
+{
+    text-align: left;
+}
+
+table #fond
+{
+    color: white;
+    background: darkcyan;
+    border: none;
+}
+
+table td
+{
+    border: 1px solid black;
+    width: 250px;
+    text-align: left;
+}
+
+.texte th
+{
+    text-align: center;
+}
+
+table #icon img
+{
+    width: 50px;
+    height: 50px;
+}
+
+figure
+{
+    border: thin #c0c0c0 solid;
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
+    max-width: 800px;
+    margin: auto;
+}
+
+figcaption
+{
+    background-color: #222;
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
+
+.tableau td
+{
+    width: 50px;
+}
+
+#js_0
+{
+    width: 600px;
+    height: 110px;
+    margin-left: -125px;
+    resize: none;
+}
+
+#html_1
+{
+    width: 550px;
+    height: 70px;
+    margin-left: -125px;
+    resize: none;
+}
+
+#html_2
+{
+    width: 550px;
+    height: 125px;
+    margin-left: -125px;
+    resize: none;
+}
+
+#js_1
+{
+    width: 450px;
+    height: 140px;
+    margin-left: -125px;
+    resize: none;
+}
+
+#js_2
+{
+    width: 450px;
+    height: 75px;
+    margin-left: -125px;
+    resize: none;
+}
+
+#js_3
+{
+    width: 700px;
+    height: 275px;
+    margin-left: -125px;
+    resize: none;
+}
+
+#js_4
+{
+    width: 700px;
+    height: 175px;
+    margin-left: -125px;
+    resize: none;
+}
+
+#js_5
+{
+    width: 700px;
+    height: 185px;
+    margin-left: -125px;
+    resize: none;
+}
+
+#js_6
+{
+    width: 700px;
+    height: 125px;
+    margin-left: -125px;
+    resize: none;
+}
+
+#js_7
+{
+    width: 600px;
+    height: 30px;
+    margin-left: -125px;
+    resize: none;
+}
+
+#js_8
+{
+    width: 700px;
+    height: 50px;
+    margin-left: -125px;
+    resize: none;
+}
+
+#http_1
+{
+    width: 750px;
+    height: 175px;
+    margin-left: -125px;
+    resize: none;
+}
+
+#http_2
+{
+    width: 750px;
+    height: 275px;
+    margin-left: -125px;
+    resize: none;
+}
+
+#form_1
+{
+    width: 600px;
+    height: 100px;
+    margin-left: -125px;
+    resize: none;
+}
+
+#form_2
+{
+    width: 500px;
+    height: 125px;
+    margin-left: -125px;
+    resize: none;
+}
+
+.img
+{
+    width: 25px;
+    height: 25px;
+}
+
+.convertisseur
+{
+    border: 1px solid black;
+    border-color: grey;
+    background-color: grey;
+    width: 250px;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 50%;
+    padding: 10px;
+}
+
+.convertisseur img
+{
+    border-radius: 2;
+    margin-top: 10px;
+}
+
+.convertisseur input
+{
+    border-radius: 5px;
+    padding-top: 10px;
+    border: 1px solid grey;
+}
+
+.convertisseur ul
+{
+    list-style: none;
+    margin-left: -30px;
+}
+
+.boutons
+{
+    margin-top: 10px;
+}
+
+.boutons input
+{
+    width: 100px;
+    padding-bottom: 8px;
+}
+
+.btn
+{
+    width: 60px;
+    border-radius: 5px;
+}
+
+.btn:hover
+{
+    background-color: darkgrey;
+}
+
+.btn:focus
+{
+    background-color: orange;
+}
+
+.entree, .sortie
+{
+    width: 180px;
+    text-align: center;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+}
