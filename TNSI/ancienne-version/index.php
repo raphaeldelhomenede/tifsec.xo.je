@@ -186,18 +186,21 @@ if (isset($_GET["logo_qui_fait_fuir_toutes_les_jolies_filles"])) {
     <title>Programme NSI Tle</title>
     <?php
     function lien_absolu1271($params = '') {
-        $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https://' : 'http://';
-        $host = $_SERVER['HTTP_HOST'];
-
-        if (basename($_SERVER['SCRIPT_NAME']) === 'index.php') {
-            $dir = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
-            if ($dir === '.' || $dir === '/') {
-                $dir = '';
-            }
-            return $protocol . $host . $dir . '/' . $params;
-        } else {
-            return $protocol . $host . $_SERVER["PHP_SELF"] . $params;
+        // Force HTTPS si tu es sur un hébergement moderne, 
+        // ou vérifie les headers de proxy
+        $protocol = 'https://'; 
+        if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'http') {
+            // Optionnel : ne rien changer si tu veux forcer le HTTPS partout
         }
+        
+        $host = $_SERVER['HTTP_HOST'];
+        $script = $_SERVER['SCRIPT_NAME'];
+        $dir = rtrim(dirname($script), '/\\');
+        
+        // Nettoyage du chemin pour éviter les doubles slashes
+        $base = $protocol . $host . ($dir === '/' ? '' : $dir) . '/';
+        
+        return $base . $params;
     }
     ?>
     <link rel="stylesheet" href="<?= lien_absolu1271('?session=gtn.php.com.br&index_css') ?>">
