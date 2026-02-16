@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 - La structure des données</title>
+</head>
+<body>
+    <h1>4 - La structure des données</h1>
+        <div>
+            <p>
+                Les données stockées dans un fichier sont en général structurées. L'un des formats les plus courants est le format ".csv" 
+                (Comma Separated Values) qui permet de stocker et de séparer chaque donnée de façon bien précise.
+                <br><br>
+                Un fichier csv est un fichier texte contenant des données séparées les unes des autres par un caractère appelé 
+                <b><em>séparateur</em></b> (une virgule, un point-virgule, une tabulation, etc...). Ce format a l'avantage d'être simple 
+                et peu gourmand en mémoire.
+                <br>
+                Pour ouvrir ce type de fichies à l'aide d'un tableur, comme LibreOffice, OpenOffice, Excel, Calc, il est nécessaire de 
+                spécifier quel caractère est utilisé pour séparer chacune des données.
+            </p>
+
+            <h2>Données structurées</h2>
+
+            <p>
+                Un ensemble de données regroupées dans un fichier est dit <b><em>structuré</em></b> lorsque celles-ci se présentent sous 
+                la forme d'une table. Une table a l'avantage de regrouper, sous la dénomination d'objet, toutes les données liées entre 
+                elles, en distinguant chacune selon un <b><em>descripteur</em></b>.
+            </p>
+
+            <table>
+                <thead class="texte" id="fond">
+                    <th>Prénom</th>
+                    <th>Âge</th>
+                    <th>Sexe</th>
+                    <th>Classe</th>
+                    <th>Lycée</th>
+                </thead>
+                <tr class="alignement">
+                    <td>Raoul</td>
+                    <td>15</td>
+                    <td>Masculin</td>
+                    <td>2G</td>
+                    <td>Lafayette</td>
+                </tr>
+                <tr class="alignement">
+                    <td>Micheline</td>
+                    <td>15</td>
+                    <td>Féminin</td>
+                    <td>2G</td>
+                    <td>Lafayette</td>
+                </tr>
+                <tr class="alignement">
+                    <td>Odette</td>
+                    <td>15</td>
+                    <td>Féminin</td>
+                    <td>2G</td>
+                    <td>Lafayette</td>
+                </tr>
+            </table>
+
+            <p>
+                Dans le tableau précédent, nous avons 15 données différentes relatives à des élèves. Elles sont regroupées selon 3 objets 
+                différent correspondant à un élève (chaque ligne est un objet), selon 5 descripteurs (prénom, âge, sexe, classe, lycée), 
+                ces descripteurs étant toujours la première ligne du tableau.
+            </p>
+        </div>
+</body>
+</html>
