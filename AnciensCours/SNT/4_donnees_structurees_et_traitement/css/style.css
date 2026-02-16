@@ -1,0 +1,109 @@
+body
+{
+    font-family: calibri;
+}
+
+.chapitres
+{
+    display: grid;
+}
+
+.chapitres a
+{
+    margin-bottom: 10px;
+}
+
+.container
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+section
+{
+    display: inline-flex;
+    grid-template-columns: 10% 50%;
+    height: 100%;
+}
+
+article
+{
+    margin-top: -20px;
+    margin-left: 10px;
+    width: 140%;
+}
+
+aside img
+{
+    width: 250px;
+    height: 250px;
+}
+
+table
+{
+    border: 1px solid black;
+}
+
+table th
+{
+    text-align: left;
+}
+
+table #fond
+{
+    color: white;
+    background: darkcyan;
+    border: none;
+}
+
+table td
+{
+    border: 1px solid black;
+    width: 250px;
+    text-align: left;
+}
+
+.texte th
+{
+    text-align: center;
+}
+
+#icon
+{
+    text-align: center;
+}
+
+table #icon img
+{
+    width: 50px;
+    height: 50px;
+}
+
+figure
+{
+    border: thin #c0c0c0 solid;
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
+    max-width: 800px;
+    margin: auto;
+}
+
+figcaption
+{
+    background-color: #222;
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
+
+.tableau td
+{
+    width: 50px;
+}
+
+.alignement td
+{
+    text-align: center;
+}
