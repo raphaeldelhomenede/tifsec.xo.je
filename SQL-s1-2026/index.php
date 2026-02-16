@@ -136,6 +136,6 @@ $html_modifie = preg_replace_callback(
 );
 ?>
 <!-- https://tifsec-nsi.yzz.me/SQL-s1-2026/?tp1_exo_zip -->
-<?
+<?php
 echo $html_modifie;
 ?>
