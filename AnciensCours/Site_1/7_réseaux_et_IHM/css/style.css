@@ -1,0 +1,154 @@
+body
+{
+    font-family: calibri;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+header
+{
+    margin: 0px 0px 0px 0px;
+    padding: 1px 0px 1px 0px;
+    background-color: cornflowerblue;
+}
+
+.menu_hor
+{
+    display: inline;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.menu_hor li
+{
+    display: inline-block;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding: 5px 5px 5px 5px;
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+.menu_hor li:hover
+{
+    background-color: orange;
+    
+}
+
+#left_menu
+{
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    width: 15%;
+    height: 85vh;
+    float: left;
+    background-color: cornflowerblue;
+}
+
+#left_menu li
+{
+    margin: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    background-color: cornflowerblue;
+    list-style: none;
+}
+
+#left_menu li:hover
+{
+    background-color: orange;
+}
+
+#content
+{
+    margin-left: 16%;
+}
+
+h1
+{
+    margin: 0px 0px 0px 0px;
+    padding-top: 5px;
+    text-align: center;
+    color: white;
+}
+
+h2, h3, h4, h5, h6
+{
+    text-align: center;
+    background-color: orange;
+}
+
+h3
+{
+    margin: 5px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+h6
+{
+    margin: 5px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+.clicable
+{
+    padding: 24px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    float: left;
+    width: 20%;
+}
+
+.clicable li
+{
+    list-style-type: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 90%;
+    margin: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
+}
+
+.clicable li:hover
+{
+    color: white;
+    background-color: orange;
+}
+
+a
+{
+    font-style: none;
+    color: orange;
+}
+
+figure
+{
+    text-align: center;
+    width: 500px;
+    height: 300px;
+}
+
+figcaption
+{
+    background-color: lightslategray;
+    text-align: center;
+}
+
+.photos
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#cours6 a
+{
+    color: white;
+    text-decoration: none;
+}
