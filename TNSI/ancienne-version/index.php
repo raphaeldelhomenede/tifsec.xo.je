@@ -186,20 +186,10 @@ if (isset($_GET["logo_qui_fait_fuir_toutes_les_jolies_filles"])) {
     <title>Programme NSI Tle</title>
     <?php
     function lien_absolu1271($params = '') {
-        // Force HTTPS si tu es sur un hébergement moderne, 
-        // ou vérifie les headers de proxy
-        $protocol = 'https://'; 
-        if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'http') {
-            // Optionnel : ne rien changer si tu veux forcer le HTTPS partout
-        }
-        
         $host = $_SERVER['HTTP_HOST'];
         $script = $_SERVER['SCRIPT_NAME'];
         $dir = rtrim(dirname($script), '/\\');
-        
-        // Nettoyage du chemin pour éviter les doubles slashes
-        $base = $protocol . $host . ($dir === '/' ? '' : $dir) . '/';
-        
+        $base = "//" . $host . ($dir === '/' ? '' : $dir) . '/'; // On commence par //
         return $base . $params;
     }
     ?>
@@ -343,7 +333,7 @@ if (isset($_GET["logo_qui_fait_fuir_toutes_les_jolies_filles"])) {
                 </tbody>
             </table> <!--<?php echo $today11; echo ' '.$today11dmy; ?>-->
         <?php elseif (in_array($session_actuelle, array_keys($seances_data3[6][0]))) : ?>
-                <embed src="<?= ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . ((basename($_SERVER['SCRIPT_NAME']) === 'index.php') ? rtrim(dirname($_SERVER['SCRIPT_NAME']), '/') . '/' : $_SERVER['SCRIPT_NAME']) . "?session=gtn.php.com.br&" . $seances_data3[6][0][$session_actuelle] ?>" type="application/pdf" width="100%" height="600px" /> <?php
+                <embed src="//<?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>&<?= $seances_data3[6][0][$session_actuelle] ?>" type="application/pdf" width="100%" height="600px" /> <?php
               elseif (in_array($session_actuelle, array_keys($seances_data3[6][3][0][0][5][6]))) :
     $url = json_decode(file_get_contents('https://raphaeldelhomenede.github.io/tifsec-nsi-rf-gd/TNSI/index-data1.json'), true)[$font1][$seances_data3[6][3][0][0][5][6][$session_actuelle]];
                 if (file_get_contents($url) === false) {echo "⚠️ Erreur lors du chargement du HTML depuis : " . $url;} else {echo file_get_contents($url);}
