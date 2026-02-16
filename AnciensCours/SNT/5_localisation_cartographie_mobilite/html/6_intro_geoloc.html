@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6 - Une autre introduction à la géolocalisation</title>
+</head>
+<body>
+    <h1>6 - Une autre introduction à la géolocalisation</h1>
+        <div>
+            <table>
+                <thead class="texte" id="fond">
+                    <th>Contenus</th>
+                    <th>Capacités attendues</th>
+                </thead>
+                <tr>
+                    <td>GPS, Galileo</td>
+                    <td>Décrire le principe de fonctionnement de la géolocalisation.</td>
+                </tr>
+            </table>
+
+            <h3>Activité</h3>
+
+            <p>Découvrir le principe de la géolocalisation en manipulant des ressources de géométrie dans l’espace</p>
+
+            <p>
+                Cette activité a pour objectif de rappeler le principe de repérage sur la Terre et de faire découvrir le fonctionnement 
+                de la géolocalisation à partir d’une modélisation de trois satellites.
+            </p>
+
+            <h2>Première partie - repérage sur la Terre</h2>
+
+            <p>Afin de repérer tout point de la Terre, on utilise deux cercles de référence : l’équateur et le méridien de Greenwich.</p>
+
+            <p>Chaque point M de la Terre peut alors être repéré en coordonnées géographiques par:
+                <ul>
+                    <li>Sa longitude, angle entre le méridien de Greenwich et le méridien passant par M.</li>
+                    <li>Sa latitude, angle entre l’équateur et le parallèle passant par M.</li>
+                </ul>
+            </p>
+
+            <p>
+                Afin que cette représentation soit unique, il faut préciser si la latitude est Nord ou Sud (en fonction de l’appartenance 
+                à un des deux hémisphères) et si la longitude est Est ou Ouest suivant la situation du point M par rapport au méridien 
+                de Greenwich.
+            </p>
+
+            <p>Sur l’image ci-dessous, on dit que M a une latitude de 31,6°N et une longitude de 56,12°E.</p>
+
+            <img src="../img/img.png" alt="">
+
+            <p>
+                Ouvrer à l’aide de 
+                <a href="https://www.geogebra.org/classic?lang=fr">GeoGebra</a>
+                le fichier 
+                <a href="../fichiers_attaches_intro_localisation_1154468.zip">villes.ggb</a>.
+                <br>
+            </p>
+
+            <p>
+                En déplaçant à l’aide de la souris le point «mobile» M, retrouvez les coordonnées géographiques de chacune des villes 
+                du fichier en complétant le tableau ci-après. Compléter également les longitudes et latitudes en précisant E/O et N/S.
+            </p>
+
+            <p>
+                Notez bien qu’il est difficile d’obtenir exactement les coordonnées du tableau en superposant le point «mobile» M sur les 
+                différentes villes, mais en observant les latitudes et longitudes affichées, on y arrive facilement.
+            </p>
+
+            <table id="table_geoloc">
+                <thead class="texte" id="fond">
+                    <th>Villes</th>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
+                </thead>
+                <tr>
+                    <td></td>
+                    <td>51,5°...</td>
+                    <td>0°</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>48,9°...</td>
+                    <td>2,3°...</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>40,4°...</td>
+                    <td>3,7°...</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>40,6°...</td>
+                    <td>116,4°...</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>39,9°...</td>
+                    <td>74,1°...</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>56,8°...</td>
+                    <td>37,7°...</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>0°</td>
+                    <td>79°...</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>34°...</td>
+                    <td>18,5°...</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>33,5°...</td>
+                    <td>70,7°...</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>34°...</td>
+                    <td>151,1°...</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>41,3°...</td>
+                    <td>174,8°...</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>59,9°...</td>
+                    <td>10,8°...</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>36,8°...</td>
+                    <td>10,2°...</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>1°...</td>
+                    <td>100,4°...</td>
+                </tr>
+            </table>
+
+            <h2>Seconde partie - usage de satellites et principe du GPS</h2>
+
+            <section>
+                <article id="geoloc">
+                    <ul>
+                        <li>
+                            Maintenant que le repérage d’un point de la surface est défini, il faut définir une technique pour attribuer des 
+                            coordonnées à un point de la surface.
+                        </li>
+                        <li>
+                            Un récepteur GPS à la surface de la Terre capte les signaux émis par trois satellites S1, S2 et S3 et calcule les 
+                            différences de temps en secondes, entre son horloge interne et les horloges atomiques des satellites. Cette faible 
+                            différence va permettre de déterminer la distance du récepteur à chacun des satellites.
+                        </li>
+                        <li>
+                            L’objectif est de positionner le point mobile M correctement et de retrouver dans quelle ville du tableau précédent 
+                            le récepteur GPS se situe.
+                        </li>
+                    </ul>
+                </article>
+                <aside>
+                    <img src="../img/img_2.png" alt="" id="img_geoloc">
+                </aside>
+            </section>
+
+            <p>
+                Pour cela, vous travaillerez avec le fichier satellites.ggb dans lequel:
+
+                <ul>
+                    <li>la sphère «Terre» a pour rayon 1,6 (échelle utilisée pour simplifier, au lieu de 6400 km);</li>
+                    <li>
+                        trois points S1, S2 et S3, représentent des satellites du réseau GPS.
+                        <br>
+                        - Ils sont sur une sphère «orbite» à 20200 km d’altitude donc à _____________ km du centre de la Terre soit sur une 
+                        sphère orbite de rayon ____________ dans GeoGebra;
+                    </li>
+                    <li>remplir le tableau, en admettant que la vitesse de la lumière c est de _____________________.</li>
+                </ul>
+            </p>
+
+            <table>
+                <thead class="texte" id="fond">
+                    <th>Satellite</th>
+                    <th>S1</th>
+                    <th>S2</th>
+                    <th>S3</th>
+                </thead>
+                <tr>
+                    <td>Différence de temps (s)</td>
+                    <td>0,067500000</td>
+                    <td>0,072233333</td>
+                    <td>0,081533333</td>
+                </tr>
+                <tr>
+                    <td>Distance (km)</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Rayon pour GeoGebra</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+
+            <section id="geoloc">
+                <article>
+                    <p>
+                        <h4>Rappel:</h4>
+        
+                        vitesse = distance / temps
+                        <br><br>
+                        donc distance = __________________
+                        <br><br>
+                        Créez alors dans GeoGebra:
+                        <ul>
+                            <li>la sphère sphere 1 de centre S1 et de rayon ______________;</li>
+                            <li>la sphère 2 de centre S2 et de rayon _____________</li>
+                            <li>le cercle cercle 12 intersection de sphère 1 et sphère 2.</li>
+                        </ul>
+                    </p>
+                </article>
+                <aside>
+                    <img src="../img/img_3.png" alt="">
+                </aside>
+            </section>
+
+            <p>Conseil pour la suite : masquez les sphères sphère 1 et sphère 2.</p>
+
+            <p>
+                Créez ensuite:
+                <ul>
+                    <li>la sphère sphere 3 de centre S3 et de rayon ______________;</li>
+                    <li>le cercle cercle 23 intersection de sphère 2 et sphère 3;</li>
+                    <li>les points d’intersection des cercles cercle 12 et cercle 23.</li>
+                </ul>
+                Si vous ne vous êtes pas trompés, l’un des deux points est sur la surface de la Terre ! Déplacer le point «mobile» M pour 
+                trouver ses coordonnées (à afficher dans la barre latérale), il s’agit de la ville ___________.
+                <br>
+                Faire ensuite des recherches et expliquer les différences entre les systèmes GPS et Galiléo.
+            </p>
+        </div>
+</body>
+</html>
