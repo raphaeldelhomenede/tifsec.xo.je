@@ -267,12 +267,20 @@ if (isset($_GET["logo_qui_fait_fuir_toutes_les_jolies_filles"])) {
                                         echo 'https://' . $_SERVER['HTTP_HOST'] . '/TNSI/?session=' . $key5522 . $fonts1[$font1]['link3'];
                                     }
                                 } elseif ($_SERVER['HTTP_HOST'] == 'tifsec-nsi.up.railway.app') {
+                                    $protocol = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? "https://" : "http://";
+                                    $host = $_SERVER['HTTP_HOST'];
+                                    $path_base = ($_SERVER['HTTP_HOST'] === 'localhost') ? '' : '/TNSI';
+                                    
+                                    if ($host === 'tifsec-nsi.up.railway.app') {
+                                        $path_base .= '/ancienne-version';
+                                    }
+                                    
                                     if ($key5522 == 'calendar') {
-                                        $url1 = $fonts1[$font1]['link2'];
-                                        echo 'https://' . $_SERVER['HTTP_HOST'] . '/TNSI/ancienne-version' . $fonts1[$font1]['link2'];
+                                        $suffixe = $fonts1[$font1]['link2'] ?? '';
+                                        echo $protocol . $host . $path_base . $suffixe;
                                     } else {
-                                        $url1 = $fonts1[$font1]['link3'];
-                                        echo 'https://' . $_SERVER['HTTP_HOST'] . '/TNSI/ancienne-version/?session=' . $key5522 . $fonts1[$font1]['link3'];
+                                        $suffixe = $fonts1[$font1]['link3'] ?? '';
+                                        echo $protocol . $host . $path_base . '/?session=' . urlencode($key5522) . $suffixe;
                                     }
                                 }
                             ?>" class="<?= ($key5522 == $session_actuelle) ? 'active' : '' ?>">
