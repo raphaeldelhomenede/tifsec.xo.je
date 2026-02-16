@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 - Réalisation d'une IHM simple d'un objet connecté</title>
+</head>
+<body>
+    <h1>5 - Réalisation d'une IHM simple d'un objet connecté</h1>
+        <div>
+            <h3>Contenus et capacités</h3>
+
+            <table>
+                <thead class="texte" id="fond">
+                    <th>Contenus</th>
+                    <th>Capacités attendues</th>
+                </thead>
+                <tr>
+                    <td>Interface homme-machine (IHM)</td>
+                    <td>Réaliser une IHM simple d’un objet connecté</td>
+                </tr>
+            </table>
+
+            <p>
+                Cette activité porte sur la réalisation d’une IHM simple d’un objet connecté comme le téléphone. Il est possible de proposer 
+                d’autres activités en utilisant d’autres objets comme des microcontrôleurs par exemple. Elle se présente en quatre parties.
+                <br><br>
+                La partie 1 explique le principe de fonctionnement de ce protocole.
+                <br><br> 
+                La partie 2 explique comment les objets publient leurs données sur un canal appelé «topic» et comment d’autres objets peuvent 
+                lire ces données. L’accent est mis sur la construction hiérarchique des «topics».
+                <br><br>
+                La partie 3 est le schéma à compléter par des flèches de couleurs différentes permettant de distinguer les clients qui 
+                publient de ceux qui sont abonnés. Il est possible de poser d’autres questions concernant les différents «topics».
+                <br><br>
+                La partie 4 propose la création d’une IHM entre 2 smartphones en utilisant le protocole MQTT. Il est possible de faire 
+                travailler les élèves en binôme. L’un publiant des données à l’aide d’un curseur et l’autre recevant les données à l’aide 
+                d’une jauge.
+                <br><br>
+                La partie 5 propose d’enrichir l’application précédente en ajoutant d’autres capteurs.
+            </p>
+
+            <h3>Partie 1 - Utiliser un service de messagerie dédié à l’internet des objets</h3>
+
+            <div class="container">
+                <section>
+                    <article>
+                        <p>
+                            Le protocole MQTT permet à divers objets de publier des informations (par exemple une sonde de température peut 
+                            publier des données). Certains objets peuvent être abonnés à ces publications et donc recevoir les données. Les 
+                            objets communiquent avec un serveur nommé «Broker».
+                            <br><br>
+                            Ils peuvent être:
+                            <ul>
+                                <li>«publisher» c’est-à-dire qu’ils peuvent publier des données sur des sujets;</li>
+                                <li>«subscriber» c’est-à-dire abonnés à des sujets.</li>
+                            </ul>
+                            <b><em>Bleu foncé: Subscribe to temperature</em></b>
+                            <br>
+                            <b><em>Bleu clair: Publish temperature</em></b>
+                        </p>
+                    </article>
+                    <aside>
+                        <img src="../img/mqtt.png" alt="" class="mqtt">
+                    </aside>
+                </section>
+            </div>
+
+            <h3>Partie 2</h3>
+
+            <div class="container">
+                <section>
+                    <article>
+                        <p>
+                            Pour différencier les différents services, les objets publient leurs résultats dans des «topics». Les topics 
+                            s’écrivent en utilisant un format permettant plusieurs niveaux, chaque niveau est séparé par un slash «/».
+                            <br><br>
+                            Par exemple:
+                            <ul>
+                                <li>smarthome/chambre/temperature</li>
+                                <li>smarthome/chambre/light</li>
+                            </ul>
+
+                            <h4>Question 1 </h4>
+
+                            Pourquoi dit-on que les topics sont construits de manière hiérarchique ?
+                            
+                            <h4>Question 2</h4>
+
+                            Que fait le client 1 ? Le client 2 ? Le client 3 ?
+                        </p>
+                    </article>
+                    <aside>
+                        <img src="../img/broker.png" alt="" class="broker">
+                    </aside>
+                </section>
+            </div>
+
+            <h3>Partie 3</h3>
+
+            <p>
+                Compléter le schéma suivant par des flèches de couleurs différentes permettant de distinguer les clients qui publient 
+                de ceux qui sont abonnés.
+            </p>
+            <img src="../img/utilisation.png" alt="">
+
+            <h3>Partie 4 - Création d’un IHM entre 2 téléphones utilisant le protocole MQTT</h3>
+
+            <table>
+                <thead class="texte" id="fond">
+                    <th><h4>Pour celui qui publie:</h4></th>
+                    <th><h4>Pour celui qui souscrit:</h4></th>
+                </thead>
+                <tr>
+                    <td>
+                        <ol>
+                            <li>
+                                Installation de l'application "IoT MQTT" sur son smartphone (Android)
+                                <img src="../img/Iot_MQTT_Panel.png" alt="">
+                            </li>
+                            <li>
+                                Réglage suivant que l’on utilise un smartphone ou une tablette.
+                                <img src="../img/publie_1.png" alt="">
+                            </li>
+                            <li>
+                                Création d’une connexion à un serveur pour Charles.
+                                <img src="../img/publie_2.png" alt="">
+                            </li>
+                            <li>
+                                Cliquer sur votre connexion et ajouter un panel comme un curseur (slider)
+                                <img src="../img/publie_3.png" alt="">
+                                <br>
+                                Régler le panel avec notamment le topic : monLycee/maClasse/Charles
+                                <img src="../img/publie_4.png" alt="">
+                                <br>
+                                On peut modifier la valeur du curseur.
+                            </li>
+                        </ol>
+                    </td>
+                    <td>
+                        <ol>
+                            <li>Les étapes 1 et 2 précédantes sont communes.</li>
+                            <li>
+                                Création d’une connexion à un serveur pour Émilie.
+                                <img src="../img/souscrit_1.png" alt="">
+                            </li>
+                            <li>
+                                Cliquer sur votre connexion et ajouter un panel comme une jauge (gauge)
+                                <img src="../img/souscrit_2.png" alt="">
+                                <br>
+                                Régler le panel avec notamment le topic : monLycee/maClasse/Charles
+                                <img src="../img/souscrit_3.png" alt="">
+                            </li>
+                            <li></li>
+                        </ol>
+                    </td>
+                </tr>
+            </table>
+
+            <h4>Connexion entre Charles et Émile</h4>
+
+            <img src="../img/connexion.png" alt="">
+            <br>
+            <p>
+                Lorsque Charles modifie la valeur de son curseur, Émilie voit sa jauge se modifier automatiquement.
+            </p>
+
+            <h3>Partie 5</h3>
+
+            Enrichir l'application:
+
+            <ul>
+                <li>Élève 1: rajouter un panel avec un «switch» qui publie sur le topic au format monLycee/maClasse/nomEleve1/switch</li>
+                <li>Écrire votre topic: le paramètre «Payload on» sera réglé avec on et le paramètre «Payload off» avec off</li>
+                <li>
+                    Élève 2: rajouter un panel avec une «led» qui est abonnée au topic écrit précédemment. Le paramètre «Payload on» sera 
+                    réglé avec on et le paramètre «Payload off» avec off.La couleur de la «led on» sera réglée sur #FF0000, la couleur de 
+                    la «led off» sera réglée sur #00FF00
+                </li>
+                <li>Vérifier que la commutation du switch fait changer la couleur de la led sur l’autre smartphone</li>
+            </ul>
+        </div>
+</body>
+</html>
