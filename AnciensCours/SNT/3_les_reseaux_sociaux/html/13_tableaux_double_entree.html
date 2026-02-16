@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13 - Tableau à double entrée et graphes</title>
+</head>
+<body>
+    <h1>13 - Tableau à double entrée et graphes</h1>
+        <div>
+            <p>
+                En reprenant l'exercice précédent, compléter le tableau suivant, mettre une croix ou 1 pour signifier une amitié, et rien ou 0 
+                pour signifier une absence d'amitié.
+            </p>
+
+            <table class="tableau">
+                <thead class="texte">
+                    <th></th>
+                    <th id="fond">Cléo</th>
+                    <th id="fond">Mathias</th>
+                    <th id="fond">Léane</th>
+                    <th id="fond">Léopold</th>
+                    <th id="fond">Carla</th>
+                    <th id="fond">Stella</th>
+                    <th id="fond">Maxime</th>
+                    <th id="fond">Charles</th>
+                </thead>
+                <tr>
+                    <td id="fond">Cléo</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td id="fond">Mathias</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td id="fond">Léane</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td id="fond">Léopold</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td id="fond">Carla</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td id="fond">Stella</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td id="fond">Maxime</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td id="fond">Charles</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+
+            <h3>Graphe</h3>
+
+            <p>
+                Pour vous aidez, vous pouvez consulter le cours suivant:
+                <a href="https://pixees.fr/informatiquelycee/n_site/snt_rs_graphe.html">Réseaux sociaux et graphes</a>
+                <br>
+                Toutes les notions demandées dans les exercices suivants sont reprises dans le liens.
+            </p>
+
+            <img src="../img/graphe.png" alt="Graphe de représentation amitiés exercice précédent">
+
+            <h4>Exercice - Distance entre 2 sommets</h4>
+            
+            <p>
+                La distance entre deux sommets est le nombre <b>minimum</b> d’arêtes qu’il faut parcourir pour aller d’un des deux sommets à 
+                l’autre.
+                <br><br>
+                Refaire le tableau précédent et le remplir avec la distance entre chacun des sommets du graphe.
+            </p>
+
+            <h4>Exercice – Écartement / Excentricité d’un sommet</h4>
+
+            <p>
+                L’écartement ou excentricité d’un sommet est la distance <b>maximale</b> entre ce sommet et les autres sommets du graphe.
+                <br><br>
+                Refaire et remplir le tableau suivant:
+            </p>
+
+            <table class="tableau">
+                <thead id="fond">
+                    <th>Sommet</th>
+                    <th>Cléo</th>
+                    <th>Mathias</th>
+                    <th>Léane</th>
+                    <th>Léopold</th>
+                    <th>Carla</th>
+                    <th>Stella</th>
+                    <th>Maxime</th>
+                    <th>Charles</th>
+                </thead>
+                <tr>
+                    <td id="fond">Ecartement</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+
+            <h4>Exercice - Diamètre du graphe</h4>
+            
+            <p>
+                Le diamètre d’un graphe est la distance maximale entre deux sommets de ce graphe.
+                <br><br>
+                Quel est le diamètre du graphe précédent ?
+            </p>
+
+            <h4>Exercice - Centre d’un graphe</h4>
+
+            <p>
+                On appelle centre d'un graphe, le sommet d'excentricité minimale (le centre n'est pas nécessairement unique).
+                <br><br>
+                Déterminer le centre du graphe précédent.
+                <br><br>
+                Que peut-on dire des personnes occupant le centre d’un graphe ?
+            </p>
+
+            <h4>Exercice - Rayon d’un graphe</h4>
+
+            <p>
+                Le rayon d’un graphe est l’écartement d’un des sommets du centre du graphe.
+                <br><br>
+                Déterminer le rayon du graphe précédent.
+            </p>
+
+            <p>
+                <b>
+                    <em>
+                        Les cinq exercices précédents permettent d’introduire un peu de vocabulaire sur les graphes permettant de 
+                        caractériser plus formellement des notions comme influenceurs (centre du graphe) et donner un formalisme à 
+                        l’expérience de Milgram (diamètre du graphe).
+                    </em>
+                </b>
+            </p>
+
+            <h4>Exercice - Autres graphes</h4>
+
+            <p>Déterminer le <b>rayon</b>, le <b>diamètre</b> et le <b>centre</b> des graphes suivants:</p>
+
+            <table>
+                <thead class="texte" id="fond">
+                    <th>Graphe 1</th>
+                    <th>Graphe 2</th>
+                </thead>
+                <tr>
+                    <td><img src="../img/graphe1.PNG" alt=""></td>
+                    <td><img src="../img/graphe2.PNG" alt=""></td>
+                </tr>
+            </table>
+
+            <h4>Exercice - Et Twitter et Instagram ?</h4>
+            
+            <p>
+                Comment pourrait-on modifier les graphes pour permettre de représenter le graphe des relations de Twitter ou Instagram ?
+                <br><br>
+                <b>
+                    <em>
+                        Commentaires:
+                        <br><br>
+                        On revient ici sur le caractère symétrique de l’amitié (symétrie prônée par Facebook notamment). Cette symétrie n’existe 
+                        pas sur Twitter ou Instagram : on suit quelqu’un sans nécessairement réciprocité. La représentation sous forme de tableau 
+                        à double entrée perd ainsi sa symétrie par rapport à la diagonale et les graphes deviennent des graphes orientés.
+                    </em>
+                </b>
+            </p>
+
+            <h4>Exercice - Milgram et les réseaux sociaux</h4>
+
+            <ol>
+                <li>Indiquer combien de sommets possède le graphe des relations de Facebook, d’Instagram, de Twitter.</li>
+                <li>Énoncer la conjecture de l’expérience de Milgram avec les notions vues dans le cours.</li>
+            </ol>
+        </div>
+</body>
+</html>
