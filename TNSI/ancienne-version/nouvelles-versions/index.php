@@ -40,7 +40,7 @@ if (isset($_GET['style_css'])) {
     </div>
     <br><br>
     <a href="https://raphaeldelhomenede.github.io/tifsec/AnciensCours/"><p>Voici les anciens cours de NSI</p></a>
-    <a href="https://tifsec-nsi.xo.je/nouvelles-versions-index-en-scrappé"  style="margin-top: -5px;"><p>Voici les nouveaux cours de NSI en scrappé</p></a>
+    <a href="https://tifsec-nsi.up.railway.app/TNSI/version-scrappe"  style="margin-top: -5px;"><p>Voici les nouveaux cours de NSI en scrappé</p></a>
 </body>
 </html>
 <script>
