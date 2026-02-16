@@ -2,10 +2,10 @@
 $seances_data3 = json_decode(file_get_contents('https://raphaeldelhomenede.github.io/tifsec-nsi-rf-gd/TNSI/seances.json'), true);
 $sessions = $seances_data3[6][3][0][0][1];
 
-if ((!isset($_SERVER['HTTPS']) || $_SERVER['HTTPS'] !== 'on')) { ?>
+/*if ((!isset($_SERVER['HTTPS']) || $_SERVER['HTTPS'] !== 'on')) { ?>
     <meta http-equiv="refresh" content="0; URL=https://<?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>" />
     <?php exit;
-}
+}*/
 
 if (strpos($_SERVER['REQUEST_URI'], 'index.php') !== false) {
     // Envoie un header 404 et affiche une page d'erreur ou rien
