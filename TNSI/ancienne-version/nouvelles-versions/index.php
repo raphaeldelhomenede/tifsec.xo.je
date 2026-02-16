@@ -21,7 +21,7 @@ if (isset($_GET['style_css'])) {
     <meta name="author" content="Un super prof de NSI(Numérique et sciences informatique)">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil de NSI</title>
-    <link rel="icon" type="image/png" href="https://tifsec-nsi.rf.gd/TNSI/?logo_qui_fait_fuir_toutes_les_jolies_filles">
+    <link rel="icon" type="image/png" href="https://tifsec-nsi.up.railway.app/TNSI/version-scrappe/?favicon_ico">
     <link rel="stylesheet" href="?style_css">
 </head>
 <body>
