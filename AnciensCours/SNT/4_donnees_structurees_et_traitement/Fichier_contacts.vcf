@@ -1,0 +1,283 @@
+BEGIN:VCARD
+VERSION:4.0
+FN: Thomas Bréard
+N: Bréard;Thomas;;Pr;
+TEL:06 12 45 78 89
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Clinique
+N: Standard clinique;;;;
+TEL:01 12 45 45 99
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Françoise Commulot
+N: Commulot;Françoise;;Pr;
+TEL:06 47 15 89 78
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: André Colin
+N: Colin;André;;;
+TEL:01 25 89 47 47
+ADR:;;34 rue Molière;Saint-Germain-en-Laye;;78100;France
+BDAY:1934-01-14
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Lucienne Colin
+N: Colin;Lucienne;;;
+TEL:01 25 89 47 47
+ADR:;;34 rue Molière;Saint-Germain-en-Laye;;78100;France
+BDAY:1937-07-02
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Etienne Drivault
+N: Drivault;Etienne;;Pr;
+TEL:06 25 47 12 62
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Françoise Drivault
+N: Drivault;Françoise;;Pr;
+TEL:06 87 45 59 45
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Audrey Evrard
+N: Evrard;Audrey;;;
+EMAIL: audrey.evrard@yahoo.fr
+TEL:06 49 78 66 65
+ADR:;;43 rue Saint-Réal;Chambéry;;73000;France
+BDAY:1992-10-18
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Thomas Evrard
+N: Evrard;Thomas;;;
+EMAIL: thomas.evrard@yahoo.fr
+TEL:06 12 47 12 56
+ADR:;;25bis rue Jean Bocq;Grenoble;;38000;France
+BDAY:1961-04-29
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Carinne Fermin
+N: Fermin;Carinne;;Dr;
+TEL:06 14 78 49 54
+ADR:;;12 rue Grande Fontaine;Saint-Germain-en-Laye;;78100;France
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Catherine Fradian
+N: Fradian;Catherine;;Pr;
+TEL:06 41 18 52 64
+ADR:;;84 route du Grand Pont;Le Vésinet;;78110;France
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Jean Gelt
+N: Gelt;Jean;;Infirmier;
+TEL:06 13 78 54 25
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Antoine Le Bréal
+N: Le Bréal;Antoine;;;
+TEL:06 24 45 12 36
+ADR:;;25 rue Georges Guynemer;Nantes;;44000;France
+BDAY:2008-09-11
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: François Le Bréal
+N: Le Bréal;François;;;
+EMAIL: francois.lebreal@orange.fr
+TEL:06 37 44 65 89
+ADR:;;25 rue Georges Guynemer;Nantes;;44000;France
+BDAY:1984-03-14
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Manon Le Bréal
+N: Le Bréal;Manon;;;
+TEL:06 55 44 78 12
+ADR:;;25 rue Georges Guynemer;Nantes;;44000;France
+BDAY:2006-02-18
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Jeanne Leporte
+N: Leporte;Jeanne;;Dr;
+TEL:06 45 78 15 49
+ADR:;;56bis rue de Bergette;Saint-Germain-en-Laye;;78100;France
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Thomas Leportier
+N: Leportier;Thomas;;Dr;
+TEL:06 31 12 78 78
+ADR:;;51 rue des Ursulines;Saint-Germain-en-Laye;;78100;France
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Julien Lermonin
+N: Lermonin;Julien;;;
+EMAIL: julien.lermonin@yahoo.fr
+TEL:06 16 18 95 64
+ADR:;;43 rue Saint-Réal;Chambéry;;73000;France
+BDAY:1990-08-05
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Lucas Lermonin
+N: Lermonin;Lucas;;;
+ADR:;;43 rue Saint-Réal;Chambéry;;73000;France
+BDAY:2017-06-16
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Marion Lermonin
+N: Lermonin;Marion;;;
+ADR:;;43 rue Saint-Réal;Chambéry;;73000;France
+BDAY:2017-06-16
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Audrey Lourfin
+N: Lourfin;Audrey;;Infirmière;
+TEL:06 30 31 87 54
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Antoine Martin
+N: Martin;Antoine;;;
+TEL:06 11 11 25 87
+ADR:;;57 boulevard Emile Zola;Arles;;13200;France
+BDAY:2005-07-02
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Catherine Martin
+N: Martin;Catherine;;;
+EMAIL: catherine.martin-lebreal@orange.fr
+TEL:06 12 25 44 56
+ADR:;;25 rue Georges Guynemer;Nantes;;44000;France
+BDAY:1985-10-25
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Daniel Martin
+N: Martin;Daniel;;;
+TEL:05 19 78 64 15
+ADR:;;18 rue de Norvège;La Rochelle;;17000;France
+BDAY:1936-11-25
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Eponine Martin
+N: Martin;Eponine;;;
+TEL:06 55 78 12 37
+ADR:;;57 boulevard Emile Zola;Arles;;13200;France
+BDAY:2008-11-19
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Guillaume Martin
+N: Martin;Guillaume;;;
+ADR:;;57 boulevard Emile Zola;Arles;;13200;France
+BDAY:2015-08-14
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Jean Martin
+N: Martin;Jean;;;
+EMAIL: jean.martin@gmail.com
+TEL:06 78 12 36 45
+ADR:;;57 boulevard Emile Zola;Arles;;13200;France
+BDAY:1983-05-06
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Juliette Martin
+N: Martin;Juliette;;;
+EMAIL: juliette.martin@gmail.com
+TEL:06 41 12 78 19
+ADR:;;43 rue Louis Yvert;Marly-le-Roi;;78160;France
+BDAY:1955-12-14
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Lucille Martin-Evrard
+N: Martin-Evrard;Lucille;;;
+EMAIL: lucille.martin-evrard@gmail.com
+TEL:06 25 66 47 47
+ADR:;;25bis rue Jean Bocq;Grenoble;;38000;France
+BDAY:1959-04-12
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Mathilde Martin
+N: Martin;Mathilde;;;
+EMAIL: mathilde.ertag-martin@gmail.com
+TEL:06 12 11 78 78
+ADR:;;57 boulevard Emile Zola;Arles;;13200;France
+BDAY:1985-05-25
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Monique Martin
+N: Martin;Monique;;;
+TEL:05 19 78 64 15
+ADR:;;18 rue de Norvège;La Rochelle;;17000;France
+BDAY:1937-12-02
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Pascale Nerflin
+N: Nerflin;Pascale;;Infirmière;
+TEL:06 78 45 74 12
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Jeannine Perdain
+N: Perdain;Jeannine;;Pr;
+TEL:06 18 74 12 36
+ADR:;;72 avenue Racine;Marly-le-Roi;;78160;France
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Chloé Prudont
+N: Prudon;Chloé;;Dr;
+TEL:06 34 48 55 12
+ADR:;;115 boulevard de la Paix;Saint-Germain-en-Laye;;78100;France
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Patrick Radelon
+N: Radelon;Patrick;;Dr;
+TEL:06 15 25 14 78
+ADR:;;17 rue Carnot;Fourqueux;;78112;France
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Daniel Stanevic
+N: Stanevic;Daniel;;Infirmier;
+TEL:06 45 78 12 36
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Danièle Stonack
+N: Stonack;Danièle;;Pr;
+TEL:06 17 85 86 12
+ADR:;;12 rue de Neauphle;Fourqueux;;78112;France
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN: Jean Titemard
+N: Titemard;Jean;;Pr;
+TEL:06 25 14 10 36
+ADR:;;25 route de la Croix;Le Vésinet;;78110;France
+END:VCARD
