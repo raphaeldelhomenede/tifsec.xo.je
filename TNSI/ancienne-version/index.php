@@ -184,12 +184,14 @@ if (isset($_GET["logo_qui_fait_fuir_toutes_les_jolies_filles"])) {
     <?php afficherFaviconUmbroSVG(); ?>
     <meta name="description" content="Ce site est illégal donc utiliser tor comme navigateur pour se protéger. Ceci est le message du ministère des affaires illégales et le ministère de la sante, de la sécurité, de l'intérieur, du numérique, de l'extérieur, de l'économie, de l'Intelligence Artificielle, des sports, de Rafael Nadal.">
     <title>Programme NSI Tle</title>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <?php
     function lien_absolu1271($params = '') {
         $host = $_SERVER['HTTP_HOST'];
         $script = $_SERVER['SCRIPT_NAME'];
         $dir = rtrim(dirname($script), '/\\');
-        $base = "//" . $host . ($dir === '/' ? '' : $dir) . '/'; // On commence par //
+        // On force explicitement https au lieu de //
+        $base = "https://" . $host . ($dir === '/' ? '' : $dir) . '/'; 
         return $base . $params;
     }
     ?>
@@ -267,7 +269,7 @@ if (isset($_GET["logo_qui_fait_fuir_toutes_les_jolies_filles"])) {
                                         echo 'https://' . $_SERVER['HTTP_HOST'] . '/TNSI/?session=' . $key5522 . $fonts1[$font1]['link3'];
                                     }
                                 } elseif ($_SERVER['HTTP_HOST'] == 'tifsec-nsi.up.railway.app') {
-                                    $protocol = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? "https://" : "http://";
+                                    $protocol = "https://"; // Force le HTTPS ici
                                     $host = $_SERVER['HTTP_HOST'];
                                     $path_base = ($_SERVER['HTTP_HOST'] === 'localhost') ? '' : '/TNSI';
                                     
@@ -341,7 +343,7 @@ if (isset($_GET["logo_qui_fait_fuir_toutes_les_jolies_filles"])) {
                 </tbody>
             </table> <!--<?php echo $today11; echo ' '.$today11dmy; ?>-->
         <?php elseif (in_array($session_actuelle, array_keys($seances_data3[6][0]))) : ?>
-                <embed src="//<?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>&<?= $seances_data3[6][0][$session_actuelle] ?>" type="application/pdf" width="100%" height="600px" /> <?php
+                <embed src="https://<?= $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ?>&<?= $seances_data3[6][0][$session_actuelle] ?>" type="application/pdf" width="100%" height="600px" /> <?php
               elseif (in_array($session_actuelle, array_keys($seances_data3[6][3][0][0][5][6]))) :
     $url = json_decode(file_get_contents('https://raphaeldelhomenede.github.io/tifsec-nsi-rf-gd/TNSI/index-data1.json'), true)[$font1][$seances_data3[6][3][0][0][5][6][$session_actuelle]];
                 if (file_get_contents($url) === false) {echo "⚠️ Erreur lors du chargement du HTML depuis : " . $url;} else {echo file_get_contents($url);}
