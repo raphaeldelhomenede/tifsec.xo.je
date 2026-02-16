@@ -1,0 +1,274 @@
+body
+{
+    font-family: Calibri;
+    overflow-y: hidden;
+}
+
+/* Page principale */
+
+h1
+{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: cornflowerblue;
+    margin: 0px 0px 0px 0px;
+    border-radius: 10px;
+    color: white;
+}
+
+button
+{
+    float: left;
+    position: absolute;
+    margin: 5px 0px 0px 15px;
+    padding: 5px 5px 5px 5px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+}
+
+#nav_menu ul
+{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+#nav_menu li
+{
+    list-style: none;
+    margin: 0px 5px 0px 5px;
+    width: 200px;
+    height: 200px;
+}
+
+a
+{
+    color: white;
+    position: relative;
+    text-decoration: none;
+}
+
+.ul_menu li a div
+{
+    width: 200px;
+    height: 100px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.ul_menu li a div:hover
+{
+    opacity: 0.5;
+    margin-top: -20px;
+    cursor: pointer;
+}
+
+.ul_menu li a p
+{
+    top: 100%;
+    width: 200px;
+    height: 60px;
+    position: relative;
+    background-color: cornflowerblue;
+    border-radius: 0px 0px 20px 20px;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+iframe
+{
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    border: none;
+    overflow-y: hidden;
+}
+
+#chp_1 div
+{
+    background-image: url('img/1_internet.jpg');
+}
+
+#chp_2 div
+{
+    background-image: url('img/2_le_web.jpg');
+}
+
+#chp_3 div
+{
+    background-image: url('img/3_les_reseaux_sociaux.jpg');
+}
+
+#chp_4 div
+{
+    background-image: url('img/4_donnees_structurees_et_traitement.jpg');
+}
+
+#chp_5 div
+{
+    background-image: url('img/5_localisation_cartographie_mobilite.jpg');
+}
+
+#chp_6 div
+{
+    background-image: url('img/6_informatique_embarquee_et_objets_connectes.jpg');
+}
+
+#chp_7 div
+{
+    background-image: url('img/7_la_photographie_numerique.jpg');
+}
+
+#chp_8 div
+{
+    background-image: url('img/8_python.jpg');
+}
+
+/* Cours */
+
+header
+{
+    margin: 0px 0px 0px 0px;
+    background-color: cornflowerblue;
+    border-radius: 10px 10px 10px 10px;
+}
+
+#menu
+{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.menu_hor li
+{
+    display: inline-flex;
+    margin: 5px 0px 5px 0px;
+    padding: 5px 5px 5px 5px;
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+}
+
+.menu_hor ul
+{
+    margin: 0px 0px 0px 0px;
+}
+
+.menu_hor li:hover
+{
+    background-color: orange;
+}
+
+.principal
+{
+    margin: 5px 0px 0px 0px;
+    height: 80vh;
+}
+
+.clicable li
+{
+    list-style-type: none;
+}
+
+#left_menu
+{
+    padding-left: 0px;
+    width: 15%;
+    height: 90vh;
+    float: left;
+    background-color: cornflowerblue;
+}
+
+#left_menu li
+{
+    margin: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    background-color: cornflowerblue;
+    list-style: none;
+}
+
+#left_menu li:hover
+{
+    background-color: orange;
+}
+
+/*#content
+{
+    margin-left: 16%;
+}*/
+
+.clicable
+{
+    padding-left: 0px;
+    float: left;
+    width: 50%;
+}
+
+.clicable li
+{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 20%;
+    margin: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
+}
+
+.clicable li:hover
+{
+    color: white;
+    background-color: orange;
+}
+
+.clicable li:nth-child(0)
+{
+    background-color: orange;
+}
+
+#div_cours a
+{
+    font-style: none;
+    color: orange;
+}
+
+#source_iframe
+{
+    height: 80vh;
+    border-radius: 10px 10px 0px 0px;
+}
+
+figure
+{
+    width: 500px;
+    height: 300px;
+    margin-left: 32%;
+}
+
+figure img
+{
+    width: 500px;
+    height: 300px;
+}
+
+figcaption
+{
+    background-color: lightslategray;
+    text-align: center;
+}
