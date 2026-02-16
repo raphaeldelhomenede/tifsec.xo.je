@@ -28,8 +28,8 @@
         <img class="logoNSI" src="./Site_T/img/HTML5_logo_and_wordmark.svg.png" onclick="logoNSI()" alt="Logo NSI" width="512px" height="512px">
     </div>
     <br><br>
-    <a href="./nouvelles-versions/"><p>Voici les nouveaux cours de NSI</p></a>
-    <a href="./nouvelles-versions/index-en-scrappé.html" style="margin-top: -5px;"><p>Voici les nouveaux cours de NSI en scrappé</p></a>
+    <a href="https://tifsec-nsi.up.railway.app/TNSI/ancienne-version/nouvelles-versions/"><p>Voici les nouveaux cours de NSI</p></a>
+    <a href="https://tifsec-nsi.up.railway.app/TNSI/version-scrappe/" style="margin-top: -5px;"><p>Voici les nouveaux cours de NSI en scrappé</p></a>
 </body>
 </html>
 <script>
