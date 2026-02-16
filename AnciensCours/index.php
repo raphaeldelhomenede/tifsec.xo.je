@@ -21,7 +21,7 @@
             <a href="Site_1/index.html"><h2 style="margin-top: 0px;">Première NSI</h2></a>
         </div>
         <div class="element">
-            <a href="Site_T/index.html"><h2 style="margin-top: 0px;">Terminale NSI</h2></a>
+            <a href="https://tifsec-nsi.up.railway.app/TNSI/ancienne-version/?session=ancienne_version_terminale"><h2 style="margin-top: 0px;">Terminale NSI</h2></a>
         </div>
     </div><br>
     <div class="logo-container">
