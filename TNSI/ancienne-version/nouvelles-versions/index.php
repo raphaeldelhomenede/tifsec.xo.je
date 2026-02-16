@@ -29,13 +29,13 @@ if (isset($_GET['style_css'])) {
     <p>Voici les cours de NSI</p>
     <div class="display-flex">
         <div class="element">
-            <a href="https://tifsec-nsi.rf.gd/SNT"><h2 style="margin-top: 0px;">SNT</h2></a>
+            <a href="https://tifsec-nsi.up.railway.app/TNSI/ancienne-version/SNT"><h2 style="margin-top: 0px;">SNT</h2></a>
         </div>
         <div class="element">
-            <a href="https://tifsec-nsi.rf.gd/1NSI"><h2 style="margin-top: 0px;">Première NSI</h2></a>
+            <a href="https://tifsec-nsi.up.railway.app/TNSI/ancienne-version/1NSI"><h2 style="margin-top: 0px;">Première NSI</h2></a>
         </div>
         <div class="element">
-            <a href="https://tifsec-nsi.rf.gd/TNSI"><h2 style="margin-top: 0px;">Terminale NSI</h2></a>
+            <a href="https://tifsec-nsi.up.railway.app/TNSI/ancienne-version"><h2 style="margin-top: 0px;">Terminale NSI</h2></a>
         </div>
     </div>
     <br><br>
