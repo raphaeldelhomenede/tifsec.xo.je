@@ -347,6 +347,8 @@ if (isset($_GET["logo_qui_fait_fuir_toutes_les_jolies_filles"])) {
               elseif (in_array($session_actuelle, array_keys($seances_data3[6][3][0][0][5][6]))) :
     $url = json_decode(file_get_contents('https://raphaeldelhomenede.github.io/tifsec-nsi-rf-gd/TNSI/index-data1.json'), true)[$font1][$seances_data3[6][3][0][0][5][6][$session_actuelle]];
                 if (file_get_contents($url) === false) {echo "⚠️ Erreur lors du chargement du HTML depuis : " . $url;} else {echo file_get_contents($url);}
+              elseif (isset($_GET['ressources'])) : ?>
+                  <embed src="?session=gtn.php.com.br&ressources1" type="application/pdf" width="100%" height="600px" /> <?php
               elseif (in_array($session_actuelle, array_keys($seances_data3[6][3][0][0][5][7]))) :
                 $pdfUrl = ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . ((basename($_SERVER['SCRIPT_NAME']) === 'index.php') ? rtrim(dirname($_SERVER['SCRIPT_NAME']), '/') . '/' : $_SERVER['SCRIPT_NAME']) . $seances_data3[6][3][0][0][5][10][0][0][$seances_data3[6][3][0][0][5][7][$session_actuelle]] ?? null;
                 if (!$pdfUrl || ($pdfContent = @file_get_contents($pdfUrl)) === false) {echo "Erreur récupération PDF depuis l’URL : " . ($pdfUrl ?? 'URL introuvable');exit;}?>
