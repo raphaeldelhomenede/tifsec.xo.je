@@ -276,6 +276,14 @@ if (isset($_GET["logo_qui_fait_fuir_toutes_les_jolies_filles"])) {
                                         $url1 = $fonts1[$font1]['link3'];
                                         echo 'https://' . $_SERVER['HTTP_HOST'] . '/TNSI/?session=' . $key5522 . $fonts1[$font1]['link3'];
                                     }
+                                } elseif ($_SERVER['HTTP_HOST'] == 'tifsec-nsi.up.railway.app') {
+                                    if ($key5522 == 'calendar') {
+                                        $url1 = $fonts1[$font1]['link2'];
+                                        echo 'https://' . $_SERVER['HTTP_HOST'] . '/TNSI/ancienne-version' . $fonts1[$font1]['link2'];
+                                    } else {
+                                        $url1 = $fonts1[$font1]['link3'];
+                                        echo 'https://' . $_SERVER['HTTP_HOST'] . '/TNSI/ancienne-version/?session=' . $key5522 . $fonts1[$font1]['link3'];
+                                    }
                                 }
                             ?>" class="<?= ($key5522 == $session_actuelle) ? 'active' : '' ?>">
                                 <?= $title ?>
